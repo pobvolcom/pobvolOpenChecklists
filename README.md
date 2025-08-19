@@ -21,5 +21,6 @@ D-66292 Riegelsberg<br>
 Germany<br>
 eMail: kontakt@pobvol.com<br>
 Web: [https://www.pobvol.com/en/](https://www.pobvol.com/en/psschecklists.html)<br>
+Web: https://www.pobvol.com/en/psschecklists.html<br>
 <br>
 Please note: The use of my contact details by third parties to send unsolicited advertising and information materials is hereby expressly excluded! I expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam mails!
