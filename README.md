@@ -10,7 +10,7 @@ Platform: Microsoft 365 Business must be set up for your company to install and 
 
 Error corrections, adjustments, and extensions will be provided by me with updates.
 
-The software solution pobvol Open Checklists is Free Software: You can download the solution, install it in your Microsoft 365 Power Platform environment, and run it. The use of the solution itself is free of charge. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version. The solution is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should receive a copy of the GNU General Public License along with the solution. If not, see <http://www.gnu.org/licenses/>.
+The software solution <b>pobvol Open Checklists</b> is Free Software: You can download the solution, install it in your Microsoft 365 Power Platform environment, and run it. The use of the solution itself is free of charge. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version. The solution is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should receive a copy of the GNU General Public License along with the solution. If not, see <http://www.gnu.org/licenses/>.
 
 Copyright @ 2025 Volker Pobloth<br>
 <br>
