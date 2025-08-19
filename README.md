@@ -1,6 +1,6 @@
 pobvol Open Checklists
 
-With the software solution pobvol Open Checklists, your teams can easily and quickly define their own checklists with checkpoints and fields and then use them to transmit the results of checks and other activities to their own SharePoint lists in a structured manner.
+With the software solution <b>pobvol Open Checklists</b>, your teams can easily and quickly define their own checklists with checkpoints and fields and then use them to transmit the results of checks and other activities to their own SharePoint lists in a structured manner.
 
 Why this helps: Data structures must not be programmed with a lot of effort in databases and lists. This is easy and quick with the solution. All users can customize the checklists, checkpoints, and fields to meet the needs of the team. Structured data can also be easily processed and evaluated. This is not so quick and easy with unstructured data from emails or text messages.
 
