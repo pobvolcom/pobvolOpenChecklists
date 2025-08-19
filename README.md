@@ -4,9 +4,9 @@ With the software solution pobvol Open Checklists, your teams can easily and qui
 
 Why this helps: Data structures must not be programmed with a lot of effort in databases and lists. This is easy and quick with the solution. All users can customize the checklists, checkpoints, and fields to meet the needs of the team. Structured data can also be easily processed and evaluated. This is not so quick and easy with unstructured data from emails or text messages.
 
-Platform: Microsoft 365 Business must be set up for your company to install and operate the software solution. For each user, you need a Microsoft 365 Business Basic license or higher. This is not free and must be purchased by you from Microsoft. To install the solution, you need a Windows PC. Your users use PCs/Macs or mobile devices (Apple iPads/iPhones, Android tablets/smartphones). For customers in Germany, Microsoft delivers cloud services from Germany! Your business data is stored in compliance with GDPR in Germany - demonstrably secure data storage in German data centers.
-
 A Microsoft Power Apps application is the most important part of the solution. It allows your team to create the necessary fields, checklists, checkpoints, and record the results of checks and other activities. Microsoft tools and services are used for automation. Information emails are sent by Power Automate using Outlook. Data is stored in your SharePoint environment. I chose SharePoint to keep your license costs as low as possible.
+
+Platform: Microsoft 365 Business must be set up for your company to install and operate the software solution. For information about Microsoft 365 and Office and system requirements, see the page [Microsoft 365 und Office resources](https://support.microsoft.com/en-us/topic/microsoft-365-and-office-resources-8dabd144-d436-4aae-8c0d-37edca95f7f5#coreui-heading-ve4oosr). To install the solution, you need a Windows PC on which the PC component of the solution is installed. At least Windows 10 must be installed on the PC. Your team uses PCs/Macs or mobile devices (Apple iPads/iPhones, Android tablets/smartphones). Microsoft's minimum requirements for using Power Apps are provided on the website [Power Apps system requirements and limits - Power Apps | Microsoft Docs](https://docs.microsoft.com/en-us/power-apps/limits-and-config). You need a [Microsoft 365 Business Basic License](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-business-basic?market=en) or higher per user. This is not free and must be purchased by you from Microsoft. For customers in Germany, Microsoft delivers cloud services from Germany! Your business data is stored in compliance with GDPR in Germany - demonstrably secure [data storage in German data centers](https://www.microsoft.com/de-de/microsoft-365/business/data-security-privacy-germany).
 
 Error corrections, adjustments, and extensions will be provided by me with updates.
 
@@ -20,7 +20,6 @@ Wolfskaulstrasse 84<br>
 D-66292 Riegelsberg<br>
 Germany<br>
 eMail: kontakt@pobvol.com<br>
-Web: [https://www.pobvol.com/en/](https://www.pobvol.com/en/psschecklists.html)<br>
 Web: https://www.pobvol.com/en/psschecklists.html<br>
 <br>
 Please note: The use of my contact details by third parties to send unsolicited advertising and information materials is hereby expressly excluded! I expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam mails!
