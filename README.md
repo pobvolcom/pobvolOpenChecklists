@@ -12,14 +12,14 @@ Error corrections, adjustments, and extensions will be provided by me with updat
 
 The software solution pobvol Open Checklists is Free Software: You can download the solution, install it in your Microsoft 365 Power Platform environment, and run it. The use of the solution itself is free of charge. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version. The solution is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should receive a copy of the GNU General Public License along with the solution. If not, see <http://www.gnu.org/licenses/>.
 
-Copyright @ 2025 Volker Pobloth
-
+Copyright @ 2025 Volker Pobloth<br>
+<br>
 Volker Pobloth<br>
 pobvol Software Services<br>
-Wolfskaulstrasse 84
-D-66292 Riegelsberg
-Germany
-eMail: kontakt@pobvol.com
-Web: https://www.pobvol.com/en/
-
+Wolfskaulstrasse 84<br>
+D-66292 Riegelsberg<br>
+Germany<br>
+eMail: kontakt@pobvol.com<br>
+Web: [https://www.pobvol.com/en/](https://www.pobvol.com/en/psschecklists.html)<br>
+<br>
 Please note: The use of my contact details by third parties to send unsolicited advertising and information materials is hereby expressly excluded! I expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam mails!
