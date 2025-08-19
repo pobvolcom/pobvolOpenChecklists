@@ -14,8 +14,8 @@ The software solution pobvol Open Checklists is Free Software: You can download 
 
 Copyright @ 2025 Volker Pobloth
 
-Volker Pobloth
-pobvol Software Services
+Volker Pobloth<br>
+pobvol Software Services<br>
 Wolfskaulstrasse 84
 D-66292 Riegelsberg
 Germany
