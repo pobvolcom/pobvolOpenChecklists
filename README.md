@@ -1,4 +1,4 @@
-<strong>[pobvol Open Checklists](https://www.pobvol.com/en/psschecklists.html)</strong>
+<strong>[pobvol Open Checklists](https://www.pobvol.com/en/psschecklists.html)</strong><br>
 Checklists | Microsoft 365 (Office 365) | Study
 
 With the software solution <b>pobvol Open Checklists</b>, your teams can easily and quickly define their own checklists with checkpoints and fields and then use them to transmit the results of checks and other activities to their own SharePoint lists in a structured manner.
