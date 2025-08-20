@@ -6,8 +6,7 @@ With the software solution <b>pobvol Open Checklists</b>, your teams can easily 
 <ul>
   <li>Data structures must not be programmed with a lot of effort in databases and lists.</li>
   <li>A Microsoft Power Apps application allows your team to create the necessary fields, checklists, checkpoints, and record the results of checks and other activities.</li>
-  <li>All users can customize the checklists, checkpoints, and fields to meet the needs of the team.</li>
-  <li>Your users can define fields of type text, number, date, and choice (choices/combobox) and assign them to each checkpoint in a checklist. This ensures flexibility.</li>
+  <li>All users can customize the checklists, checkpoints, and fields to meet the needs of the team. They can define fields of type text, number, date, and choice (choices/combobox) and assign them to each checkpoint in a checklist. This ensures flexibility.</li>
   <li>Structured data can also be easily processed and evaluated. This is not so quick and easy with unstructured data from e-mails or text messages.</li>
   <li>Data is stored in your SharePoint environment. I chose SharePoint to keep your license costs as low as possible.</li>
   <li>Microsoft tools and services are used for automation. For example: Power Automate Flow summarizes the sent data in a report and sends it via Outlook to the sender.</li>
