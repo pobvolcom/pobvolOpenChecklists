@@ -1,0 +1,9 @@
+Version 1.7 uploaded on Aug 21st, 2025
+
+Minor optimizations:
+All screens are now speech-free. Available languages: German, English
+Demo data is delivered with the SharePoint files for Status, Fields, Checklists and Checkpoints
+
+Power App and Power Automate Flow are delivered with a non managed solution.
+Means: You can modify and enhance in Teams or Edge. 
+Just open Power Apps for your team in Teams or open Power Apps in your browser.
