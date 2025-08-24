@@ -1,7 +1,0 @@
-Version 1.8 uploaded on August 23, 2025
-
-Minor optimizations:
-> all screens are translated, available languages are German and English
-> also the screen 'Add field' is translated, that was missing 
-> Demo data is delivered with the SharePoint files for Status, Fields, Checklists and Checkpoints
-
