@@ -318,7 +318,6 @@ Screens:
                               PressedColor: =RGBA(255, 255, 255, 1)
                               PressedFill: =RGBA(9, 33, 98, 1)
                               Size: =MyFontSize-3
-                              TabIndex: =1
                               Text: |+
                                 =LookUp(colLanguage,Title="Save").Wert
                               Tooltip: =Self.Text
@@ -636,7 +635,6 @@ Screens:
                                           RadiusTopLeft: =0
                                           RadiusTopRight: =0
                                           Size: =MyFontSize
-                                          TabIndex: =1
                                           Tooltip: =Parent.DisplayName
                                           Width: =Parent.Width - 60
                                           X: =30
@@ -779,7 +777,6 @@ Screens:
                                           SelectionColor: =RGBA(255, 255, 255, 1)
                                           SelectionFill: =RGBA(56, 96, 178, 1)
                                           Size: =MyFontSize
-                                          TabIndex: =1
                                           Tooltip: |-
                                             ="Select response type"
                                             //LookUp(MyUVVSettings;Title="Status Tooltip").Wert
@@ -905,7 +902,18 @@ Screens:
                   PaddingLeft: =15
                   PaddingRight: =15
                   Size: =MyFontSize-3
-                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    //MyAppName\r\n    //\"|\"\r\n    \"v\"&MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    \r\n    //&\"|\"&Language()\r\n    //&\"|Mode:\"&EditForm1_17.Mode //(0=Edit;1=Add)\r\n)\r\n"
+                  Text: |+
+                    =If(!IsBlank(FooterText),
+                        FooterText,
+                        //MyAppName
+                        //"|"
+                        "v"&MyVersion
+                        &"|"&MyDeviceType
+                        &If(OnlineStatus=0,"|Offline","|Online")
+                        &"|"&MyLanguage
+
+                        //&"|Mode:"&EditForm1_17.Mode //(0=Edit;1=Add)
+                    )
                   Width: =Parent.Width
                   Wrap: =false
                   Y: =Parent.Height-Self.Height

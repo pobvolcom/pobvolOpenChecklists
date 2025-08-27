@@ -822,7 +822,7 @@ Screens:
                   PaddingLeft: =15
                   PaddingRight: =15
                   Size: =MyFontSize-3
-                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    //&\"|\"&Language()\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|EditEntry:\"&EditEntry\r\n    //&\"|SelectedChecklist\"&SelectedChecklist\r\n    &LookUp(SComponents,Pos=SACheckpointPos,F1)\r\n)\r\n"
+                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    &\"|\"&MyLanguage\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|EditEntry:\"&EditEntry\r\n    //&\"|SelectedChecklist\"&SelectedChecklist\r\n    //&LookUp(SComponents;Pos=SACheckpointPos;F1)\r\n)\r\n"
                   Width: =Parent.Width
                   Wrap: =false
                   Y: =Parent.Height-Self.Height

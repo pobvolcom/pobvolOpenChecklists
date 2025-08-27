@@ -298,6 +298,7 @@ Screens:
 
                                 &"<b style='font-size: smaller;'>"
                                 &CountRows(SCheckpoints)
+                                &" "
                                 &LookUp(colLanguage,Title="checkpoint(s)",Wert)
                                 &"</b>"
                                 &"</b>"
@@ -336,7 +337,9 @@ Screens:
                               Visible: |+
                                 =OnlineStatus=1 && !IsBlank(SelectedChecklist)
                                 //es wurde keine Daten für die Checkliste erfasst
-                                && IsBlank(LookUp(pssChecklistsActivities,Title=SelectedChecklist,ID))
+                                /*
+                                && IsBlank(LookUp(pssChecklistsActivities;Title=SelectedChecklist;ID))
+                                */
                               Width: =90
                               X: =Parent.Width-Self.Width
                               Y: =Edit1_14.Y+Edit1_14.Height
@@ -987,7 +990,7 @@ Screens:
                   PaddingLeft: =15
                   PaddingRight: =15
                   Size: =MyFontSize-3
-                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    //&\"|\"&Language()\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|SelectedChecklist:\"&SelectedChecklist\r\n)\r\n"
+                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    &\"|\"&MyLanguage\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|SelectedChecklist:\"&SelectedChecklist\r\n)\r\n"
                   Width: =Parent.Width
                   Y: =Parent.Height-Self.Height
       - KeineDaten1_14:
@@ -1048,9 +1051,7 @@ Screens:
                   PaddingBottom: =15
                   PaddingTop: =15
                   Size: =MyFontSize+3
-                  Text: |-
-                    =//LookUp(MyUVVSettings;Title="Keine Daten gefunden").Wert
-                    "Nothing here"
+                  Text: =LookUp(colLanguage,Title="Nothing here",Wert)
                   Width: =Parent.Width
                   X: =
                   Y: =Parent.Height-Self.Height
@@ -1222,7 +1223,7 @@ Screens:
                         Height: =50
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(152, 208, 70, 1)
-                        OnSelect: "=Set(ShowDeleteDialog,false);\r\nSet (locErrorCode, \"\");\r\n//--------------------------------------------------------\r\n// Delete checklist\r\nIf(IsBlank(locErrorCode),\r\n\r\n    // remove from collection\r\n    RemoveIf(MyChecklists,Title=SelectedChecklist); \r\n    \r\n    //all good?\r\n    If(!IsEmpty(Errors([@MyChecklists])),\r\n        Set(locErrorCode, \"Error! Was not able to delete the checklist\");\r\n        Notify(\r\n            locErrorCode,\r\n            //LookUp(MyUVVSettings;\r\n            //Title=\"Fehler beim Löschen in UVVKundenliste\").Wert;\r\n            NotificationType.Error,2000\r\n        );\r\n    ,// Else\r\n        Set (locErrorCode, \"\");\r\n    );\r\n\r\n    // Save checklists locally\r\n    If(MyDeviceType=\"Mobile\" && IsBlank(locErrorCode),\r\n        SaveData(MyChecklists,\"MyChecklists\")  \r\n    );\r\n\r\n    //Remove from SP list\r\n    If(IsBlank(locErrorCode) && OnlineStatus=1,\r\n        RemoveIf(pssChecklistsChecklists,Title=SelectedChecklist); \r\n        RemoveIf(pssChecklistsChecklistsText,Title=SelectedChecklist); \r\n        RemoveIf(pssChecklistsCheckpoints,Title=SelectedChecklist); \r\n        RemoveIf(pssChecklistsCheckpointsText,Title=SelectedChecklist); \r\n    );\r\n\r\n    If(CountRows(MyChecklists)>0,\r\n        Set(SelectedChecklist,\r\n            First(MyChecklists).Title\r\n        );\r\n        Set(ChecklistSelected,true);\r\n    ,//Else\r\n        Set(SelectedChecklist,\"\");\r\n        Set(ChecklistSelected,false);\r\n    );\r\n    Set(InitialReadChecklists,true);\r\n    Set(ReadChecklists,true);\r\n\r\n);\r\n\r\n"
+                        OnSelect: "=Set(ShowDeleteDialog,false);\r\nSet (locErrorCode, \"\");\r\n//--------------------------------------------------------\r\n// Delete checklist\r\nIf(IsBlank(locErrorCode),\r\n\r\n    // remove from collection\r\n    RemoveIf(MyChecklists,Title=SelectedChecklist); \r\n    \r\n    //all good?\r\n    If(!IsEmpty(Errors([@MyChecklists])),\r\n        Set(locErrorCode, \r\n            LookUp(colLanguage,Title=\"Error! Was not able to delete the checklist\",Wert)\r\n        );\r\n        Notify(\r\n            locErrorCode,\r\n            NotificationType.Error,2000\r\n        );\r\n    ,// Else\r\n        Set (locErrorCode, \"\");\r\n    );\r\n\r\n    // Save checklists locally\r\n    If(MyDeviceType=\"Mobile\" && IsBlank(locErrorCode),\r\n        SaveData(MyChecklists,\"MyChecklists\")  \r\n    );\r\n\r\n    //Remove from SP list\r\n    If(IsBlank(locErrorCode) && OnlineStatus=1,\r\n        RemoveIf(pssChecklistsChecklists,\r\n            Title=SelectedChecklist); \r\n        RemoveIf(pssChecklistsChecklistsText,\r\n            Title=SelectedChecklist); \r\n        RemoveIf(pssChecklistsCheckpoints,\r\n            Title=SelectedChecklist); \r\n        RemoveIf(pssChecklistsCheckpointsText,\r\n            Title=SelectedChecklist); \r\n    );\r\n\r\n    If(CountRows(MyChecklists)>0,\r\n        Set(SelectedChecklist,\r\n            First(MyChecklists).Title\r\n        );\r\n        Set(ChecklistSelected,true);\r\n    ,//Else\r\n        Set(SelectedChecklist,\"\");\r\n        Set(ChecklistSelected,false);\r\n    );\r\n    Set(InitialReadChecklists,true);\r\n    Set(ReadChecklists,true);\r\n\r\n);\r\n\r\n"
                         PaddingLeft: =45
                         PressedColor: =RGBA(0, 0, 0, 1)
                         PressedFill: =RGBA(152, 208, 70, 1)

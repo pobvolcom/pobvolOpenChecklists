@@ -678,7 +678,7 @@ Screens:
                                           Tooltip: =Parent.DisplayName
                                           TrueFill: =RGBA(56, 96, 178, 1)
                                           TrueText: =LookUp(colLanguage,Title="Yes").Wert
-                                          Width: =160
+                                          Width: =175
                                           X: =30
                                           Y: =DataCardKey6.Y + DataCardKey6.Height + 5
                                     - ErrorMessage6:
@@ -1687,7 +1687,20 @@ Screens:
                   PaddingLeft: =15
                   PaddingRight: =15
                   Size: =MyFontSize-3
-                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    //MyAppName\r\n    //\"|\"\r\n    \"v\"&MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    \r\n    //&\"|\"&Language()\r\n    //&\"|Mode:\"&EditForm1_17.Mode //(0=Edit;1=Add)\r\n    //&\"|\"&SCheckpointStatus3\r\n    //&\"|\"&SCheckpointFlexForm\r\n)\r\n"
+                  Text: |+
+                    =If(!IsBlank(FooterText),
+                        FooterText,
+                        //MyAppName
+                        //"|"
+                        "v"&MyVersion
+                        &"|"&MyDeviceType
+                        &If(OnlineStatus=0,"|Offline","|Online")
+                        &"|"&MyLanguage
+
+                        //&"|Mode:"&EditForm1_17.Mode //(0=Edit;1=Add)
+                        //&"|"&SCheckpointStatus3
+                        //&"|"&SCheckpointFlexForm
+                    )
                   Width: =Parent.Width
                   Y: =Parent.Height-Self.Height
       - ImageLoading1_20:

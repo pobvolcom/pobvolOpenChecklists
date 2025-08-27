@@ -17,23 +17,23 @@ Screens:
       ImagePosition: =ImagePosition.Fill
       LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
       OnVisible: |+
-        =If(IsBlank(SelectedChecklist) &&
-            CountRows(MyChecklists)>0,
-            Set(SelectedChecklist,First(MyChecklists).Title);
-            Set(ChecklistSelected,true);
+        =If(IsBlank(SelectedCheckpoint) &&
+            CountRows(MyCheckpoints)>0,
+            Set(SelectedCheckpoint,First(MyCheckpoints).Title);
+            Set(CheckpointSelected,true);
         );
         //-----------------------------------------------------
-        If(Homepage1="ScreenChecklists",Set(Homepage1,""));
-        If(Homepage2="ScreenChecklists",Set(Homepage2,""));
-        If(Homepage3="ScreenChecklists",Set(Homepage3,""));
-        If(Homepage4="ScreenChecklists",Set(Homepage4,""));
+        If(Homepage1="ScreenCheckpoints",Set(Homepage1,""));
+        If(Homepage2="ScreenCheckpoints",Set(Homepage2,""));
+        If(Homepage3="ScreenCheckpoints",Set(Homepage3,""));
+        If(Homepage4="ScreenCheckpoints",Set(Homepage4,""));
         If(IsBlank(Homepage1),
-            Set(Homepage1,"ScreenChecklists"),
+            Set(Homepage1,"ScreenCheckpoints"),
         If(IsBlank(Homepage2),
-            Set(Homepage2,"ScreenChecklists"),
+            Set(Homepage2,"ScreenCheckpoints"),
         If(IsBlank(Homepage3),    
-            Set(Homepage3,"ScreenChecklists"),
-            Set(Homepage4,"ScreenChecklists")
+            Set(Homepage3,"ScreenCheckpoints"),
+            Set(Homepage4,"ScreenCheckpoints")
         )));
         //-----------------------------------------------------
       Width: |-
@@ -284,7 +284,10 @@ Screens:
                               Visible: |+
                                 =OnlineStatus=1 && !IsBlank(SelectedCheckpoint)
                                 //es wurde keine Daten für den Checkpunkt erfasst
-                                && IsBlank(LookUp(pssChecklistsActivitiesP,Checkpoint=SelectedCheckpoint,ID))
+                                /*
+                                && IsBlank(LookUp(pssChecklistsActivitiesP;
+                                Titel=SelectedChecklist && Checkpoint=SelectedCheckpoint;ID))
+                                */
                               Width: =90
                               X: =Parent.Width-Self.Width
                               Y: =Edit1_18.Y+Edit1_18.Height
@@ -1093,7 +1096,7 @@ Screens:
                   PaddingLeft: =15
                   PaddingRight: =15
                   Size: =MyFontSize-3
-                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    //&\"|\"&Language()\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|SelectedChecklist:\"&SelectedChecklist\r\n    //&\"|\"&SelectedCheckpoint\r\n)\r\n"
+                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    &\"|\"&MyLanguage\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|SelectedChecklist:\"&SelectedChecklist\r\n    //&\"|\"&SelectedCheckpoint\r\n)\r\n"
                   Width: =Parent.Width
                   Y: =Parent.Height-Self.Height
       - GroupDelete1_18:
@@ -1202,7 +1205,7 @@ Screens:
                         Height: =50
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(152, 208, 70, 1)
-                        OnSelect: "=Set(ShowDeleteDialog,false);\r\nSet (locErrorCode, \"\");\r\n//--------------------------------------------------------\r\n// Delete checklist\r\nIf(IsBlank(locErrorCode),\r\n\r\n    // remove from collection\r\n    RemoveIf(MyCheckpoints,\r\n        Title=SelectedChecklist&&\r\n        Checkpoint=SelectedCheckpoint); \r\n    \r\n    //all good?\r\n    If(!IsEmpty(Errors([@MyCheckpoints])),\r\n        Set(locErrorCode, \"Error! Was not able to delete the checkpoint\");\r\n        Notify(\r\n            locErrorCode,\r\n            //LookUp(MyUVVSettings;\r\n            //Title=\"Fehler beim Löschen in UVVKundenliste\").Wert;\r\n            NotificationType.Error,2000\r\n        );\r\n    ,// Else\r\n        Set (locErrorCode, \"\");\r\n    );\r\n\r\n    // Generate pos number\r\n    If(IsBlank(locErrorCode),\r\n        ClearCollect(\r\n            MyCheckpoints,\r\n            ForAll(\r\n                Sequence(CountRows(MyCheckpoints)),\r\n                Patch(\r\n                    Last(FirstN(MyCheckpoints, Value)),\r\n                    {Pos:Value}\r\n                )\r\n            )\r\n        )\r\n    );\r\n\r\n    //Remove from SP list\r\n    If(IsBlank(locErrorCode) && OnlineStatus=1,\r\n        RemoveIf(pssChecklistsCheckpoints,\r\n            Title=SelectedChecklist&&\r\n            Checkpoint=SelectedCheckpoint\r\n        ); \r\n        RemoveIf(pssChecklistsCheckpointsText,\r\n            Title=SelectedChecklist&&\r\n            Checkpoint=SelectedCheckpoint\r\n        ); \r\n        ForAll(MyCheckpoints As aSource,\r\n            Patch(pssChecklistsCheckpoints,\r\n                LookUp(pssChecklistsCheckpoints,\r\n                Title=aSource.Title&&\r\n                Checkpoint=aSource.Checkpoint),\r\n                {Pos:aSource.Pos}\r\n            )\r\n        );\r\n    );\r\n\r\n    If(CountRows(MyCheckpoints)>0,\r\n        Set(SelectedCheckpoint,\r\n            First(MyCheckpoints).Checkpoint\r\n        );\r\n        Set(CheckpointSelected,true);\r\n    ,//Else\r\n        Set(SelectedCheckpoint,\"\");\r\n        Set(CheckpointSelected,false);\r\n    );\r\n    \r\n    //Set(InitialReadCheckpoints;true);;\r\n    //Set(ReadCheckpoints;true);;\r\n\r\n);\r\n\r\n"
+                        OnSelect: "=Set(ShowDeleteDialog,false);\r\nSet (locErrorCode, \"\");\r\n//--------------------------------------------------------\r\n// Delete checklist\r\nIf(IsBlank(locErrorCode),\r\n\r\n    // remove from collection\r\n    RemoveIf(MyCheckpoints,\r\n        Title=SelectedChecklist&&\r\n        Checkpoint=SelectedCheckpoint); \r\n    \r\n    //all good?\r\n    If(!IsEmpty(Errors([@MyCheckpoints])),\r\n        Set(locErrorCode, \r\n            LookUp(colLanguage,Title=\"Error! Was not able to delete the checkpoint\").Wert\r\n        );\r\n        Notify(\r\n            locErrorCode,\r\n            //LookUp(MyUVVSettings;\r\n            //Title=\"Fehler beim Löschen in UVVKundenliste\").Wert;\r\n            NotificationType.Error,2000\r\n        );\r\n    ,// Else\r\n        Set (locErrorCode, \"\");\r\n    );\r\n\r\n    // Save checkpoints locally\r\n    If(MyDeviceType=\"Mobile\" && IsBlank(locErrorCode),\r\n        SaveData(MyCheckpoints,\"MyCheckpoints\")  \r\n    );\r\n\r\n    // Generate pos number\r\n    If(IsBlank(locErrorCode),\r\n        ClearCollect(\r\n            MyCheckpoints,\r\n            ForAll(\r\n                Sequence(CountRows(MyCheckpoints)),\r\n                Patch(\r\n                    Last(FirstN(MyCheckpoints, Value)),\r\n                    {Pos:Value}\r\n                )\r\n            )\r\n        )\r\n    );\r\n\r\n    //Remove from SP list\r\n    If(IsBlank(locErrorCode) && OnlineStatus=1,\r\n        RemoveIf(pssChecklistsCheckpoints,\r\n            Title=SelectedChecklist&&\r\n            Checkpoint=SelectedCheckpoint\r\n        ); \r\n        RemoveIf(pssChecklistsCheckpointsText,\r\n            Title=SelectedChecklist&&\r\n            Checkpoint=SelectedCheckpoint\r\n        ); \r\n        ForAll(MyCheckpoints As aSource,\r\n            Patch(pssChecklistsCheckpoints,\r\n                LookUp(pssChecklistsCheckpoints,\r\n                Title=aSource.Title&&\r\n                Checkpoint=aSource.Checkpoint),\r\n                {Pos:aSource.Pos}\r\n            )\r\n        );\r\n    );\r\n\r\n    If(CountRows(MyCheckpoints)>0,\r\n        Set(SelectedCheckpoint,\r\n            First(MyCheckpoints).Checkpoint\r\n        );\r\n        Set(CheckpointSelected,true);\r\n    ,//Else\r\n        Set(SelectedCheckpoint,\"\");\r\n        Set(CheckpointSelected,false);\r\n    );\r\n    \r\n    //Set(InitialReadCheckpoints;true);;\r\n    //Set(ReadCheckpoints;true);;\r\n\r\n);\r\n\r\n"
                         PaddingLeft: =45
                         PressedColor: =RGBA(0, 0, 0, 1)
                         PressedFill: =RGBA(152, 208, 70, 1)
@@ -1357,9 +1360,7 @@ Screens:
                   PaddingBottom: =15
                   PaddingTop: =15
                   Size: =MyFontSize+3
-                  Text: |-
-                    =//LookUp(MyUVVSettings;Title="Keine Daten gefunden").Wert
-                    "Nothing here"
+                  Text: =LookUp(colLanguage,Title="Nothing here",Wert)
                   Width: =Parent.Width
                   X: =
                   Y: =Parent.Height-Self.Height

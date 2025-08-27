@@ -745,7 +745,18 @@ Screens:
                   PaddingLeft: =15
                   PaddingRight: =15
                   Size: =MyFontSize-3
-                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    //MyAppName\r\n    //\"|\"\r\n    \"v\"&MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    \r\n    //&\"|\"&Language()\r\n    //&\"|Mode:\"&EditForm1_17.Mode //(0=Edit;1=Add)\r\n)\r\n"
+                  Text: |+
+                    =If(!IsBlank(FooterText),
+                        FooterText,
+                        //MyAppName
+                        //"|"
+                        "v"&MyVersion
+                        &"|"&MyDeviceType
+                        &If(OnlineStatus=0,"|Offline","|Online")
+                        &"|"&MyLanguage
+
+                        //&"|Mode:"&EditForm1_17.Mode //(0=Edit;1=Add)
+                    )
                   Width: =Parent.Width
                   Wrap: =false
                   Y: =Parent.Height-Self.Height

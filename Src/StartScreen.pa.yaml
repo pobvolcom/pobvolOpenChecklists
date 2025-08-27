@@ -23,7 +23,8 @@ Screens:
       OnVisible: |+
         =//Set(MySolution;"pobvol Checklists");;
         Set(MyAppName,"pssChecks");
-        Set(MyVersion, "220825-1130"); 
+        Set(MyVersion, "270825-1323"); 
+        Set(MyLanguage,Left(Language(),2));
         //-----------------------------------------------------
         Set(Homepage1,"");
         Set(Homepage2,"");
@@ -1002,6 +1003,7 @@ Screens:
                                     BorderStyle: =BorderStyle.None
                                     ContentLanguage: =Language()
                                     DisplayMode: =DisplayMode.View
+                                    FocusedBorderColor: =RGBA(109, 49, 162, 1)
                                     FocusedBorderThickness: =1
                                     Font: =Font.Arial
                                     FontWeight: =FontWeight.Bold
@@ -1012,7 +1014,7 @@ Screens:
                                     PaddingRight: =
                                     PaddingTop: =0
                                     Size: =MyFontSize+2
-                                    TabIndex: =1
+                                    TabIndex: =0
                                     Text: =LookUp(colLanguage,Title="Checklists").Wert
                                     Tooltip: =" "
                                     Width: =Parent.Width-Self.X-15
@@ -1071,7 +1073,7 @@ Screens:
                                     PaddingRight: =
                                     PaddingTop: =
                                     Size: =FlexFieldsTitle.Size*2
-                                    TabIndex: =1
+                                    TabIndex: =0
                                     Text: =CountRows(MyFlexFields)
                                     Tooltip: =" "
                                     Width: =Parent.Width-Self.X-15
@@ -1118,7 +1120,7 @@ Screens:
                                     PaddingRight: =
                                     PaddingTop: =0
                                     Size: =MyFontSize+2
-                                    TabIndex: =1
+                                    TabIndex: =0
                                     Text: =LookUp(colLanguage,Title="FlexFields").Wert
                                     Tooltip: =" "
                                     Width: =Parent.Width-Self.X-15
@@ -1174,7 +1176,7 @@ Screens:
                                     PaddingRight: =
                                     PaddingTop: =
                                     Size: =StatusTitle.Size*2
-                                    TabIndex: =1
+                                    TabIndex: =0
                                     Text: =CountRows(MyStatus)
                                     Tooltip: =" "
                                     Width: =Parent.Width-Self.X-15
@@ -1221,7 +1223,7 @@ Screens:
                                     PaddingRight: =
                                     PaddingTop: =0
                                     Size: =MyFontSize+2
-                                    TabIndex: =1
+                                    TabIndex: =0
                                     Text: =LookUp(colLanguage,Title="Possible status").Wert
                                     Tooltip: =" "
                                     Width: =Parent.Width-Self.X-15
@@ -1236,7 +1238,9 @@ Screens:
                                     BorderStyle: =BorderStyle.None
                                     Fill: =RGBA(0, 0, 0, 0)
                                     Height: =Parent.Height
-                                    OnSelect: =
+                                    OnSelect: |-
+                                      =//Set(SelectedStatus;Blank());;
+                                      Navigate(ScreenStatus);
                                     TabIndex: =0
                                     Tooltip: =" "
                                     Width: =Parent.Width
@@ -1536,7 +1540,7 @@ Screens:
                   PaddingLeft: =15
                   PaddingRight: =15
                   Size: =MyFontSize-3
-                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    &\"|\"&Language()\r\n    &\"|\"&App.Width &\"x\" &App.Height\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|SelectedChecklist:\"&SelectedChecklist\r\n    //&\"|SelA:\"&SelectedActivity\r\n)\r\n"
+                  Text: "=If(!IsBlank(FooterText),\r\n    FooterText,\r\n    \"v\"\r\n    &MyVersion\r\n    &\"|\"&MyDeviceType\r\n    &If(OnlineStatus=0,\"|Offline\",\"|Online\")\r\n    &\"|\"&MyLanguage\r\n    &\"|\"&App.Width &\"x\" &App.Height\r\n    \r\n    //&\"|Mode:\"&EditForm1_15.Mode //(0=Edit;1=Add)\r\n    //&\"|SelectedChecklist:\"&SelectedChecklist\r\n    //&\"|SelA:\"&SelectedActivity\r\n)\r\n"
                   Width: =Parent.Width
                   Y: =Parent.Height-Self.Height
       - TimerDefaultWerteLaden:
