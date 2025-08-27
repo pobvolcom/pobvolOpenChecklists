@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
   <pnp:Preferences Generator="PnP.Framework, Version=1.18.0.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-79B4E44A488741D58648D5BAF9AD2BE5">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-79B4E44A488741D58648D5BAF9AD2BE5" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-38CD7434ACBB4512AB0DC512C10ECA7A">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-38CD7434ACBB4512AB0DC512C10ECA7A" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
       <pnp:SiteFields>
         <Field ID="{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}" Name="_SPCallToAction" StaticName="_SPCallToAction" DisplayName="Handlungsaufruf" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" />
         <Field ID="{86EBE41F-255F-4170-B040-9977528A8BF5}" Name="_SPCollaborators" StaticName="_SPCollaborators" DisplayName="Mitarbeiter" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ReadOnly="TRUE" Hidden="TRUE" />
@@ -32,7 +32,9 @@
           <pnp:Views>
             <View Name="{DBBADE82-F917-4CA6-9511-DD5389E75BB5}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Alle Elemente" Url="{site}/Lists/CheckpointsText/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
-                <OrderBy />
+                <OrderBy>
+                  <FieldRef Name="ID" Ascending="FALSE" />
+                </OrderBy>
               </Query>
               <ViewFields>
                 <FieldRef Name="ID" />

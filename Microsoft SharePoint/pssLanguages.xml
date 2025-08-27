@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
   <pnp:Preferences Generator="PnP.Framework, Version=1.18.0.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-B20AF9227A8745B48B989E52123FC207">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-B20AF9227A8745B48B989E52123FC207" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-7FDADF494B284B5E83116C3E44924AE5">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-7FDADF494B284B5E83116C3E44924AE5" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
       <pnp:SiteFields>
         <Field ID="{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}" Name="_SPCallToAction" StaticName="_SPCallToAction" DisplayName="Handlungsaufruf" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" />
         <Field ID="{86EBE41F-255F-4170-B040-9977528A8BF5}" Name="_SPCollaborators" StaticName="_SPCollaborators" DisplayName="Mitarbeiter" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ReadOnly="TRUE" Hidden="TRUE" />
@@ -64,7 +64,7 @@
           <pnp:DataRows UpdateBehavior="Overwrite">
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">___VERSION___</pnp:DataValue>
-              <pnp:DataValue FieldName="Wert">20250821-1500</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">20250826-1000</pnp:DataValue>
               <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
               <pnp:DataValue FieldName="Order">100</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
@@ -72,7 +72,7 @@
             </pnp:DataRow>
             <pnp:DataRow>
               <pnp:DataValue FieldName="Title">___VERSION___</pnp:DataValue>
-              <pnp:DataValue FieldName="Wert">20250821-1500</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">20250826-1000</pnp:DataValue>
               <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
               <pnp:DataValue FieldName="Order">200</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">2_.000</pnp:DataValue>
@@ -1388,6 +1388,166 @@
               <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
               <pnp:DataValue FieldName="Order">16600</pnp:DataValue>
               <pnp:DataValue FieldName="FileLeafRef">166_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Exit app?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">App beenden?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">16700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">167_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Exit app?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Exit app?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">16800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">168_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte das Feld nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">16900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">169_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the field</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">170_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte die Checkliste nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">171_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">172_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte den Checkpunkt nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">173_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">174_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status löschen?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">175_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Delete status?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">176_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Soll dieser Status gelöscht werden?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">177_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Do you really want to delete the selected status?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">178_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte den Status nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">17900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">179_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">18000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">180_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">SortNo</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">SortNr</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">18100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">181_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">SortNo</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">SortNo</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">18200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">182_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">DefectClass</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Defektklasse</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">18300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">183_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">DefectClass</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Defect class</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">18400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">184_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">18500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">185_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">18600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">186_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
             </pnp:DataRow>
           </pnp:DataRows>

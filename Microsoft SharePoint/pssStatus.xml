@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
   <pnp:Preferences Generator="PnP.Framework, Version=1.18.0.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-87031C04DFAA4106A29400F5E5E51506">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-87031C04DFAA4106A29400F5E5E51506" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-4D8951205E2943B3898C89AEC06FBCDE">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-4D8951205E2943B3898C89AEC06FBCDE" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
       <pnp:SiteFields>
         <Field ID="{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}" Name="_SPCallToAction" StaticName="_SPCallToAction" DisplayName="Handlungsaufruf" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" />
         <Field ID="{86EBE41F-255F-4170-B040-9977528A8BF5}" Name="_SPCollaborators" StaticName="_SPCollaborators" DisplayName="Mitarbeiter" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ReadOnly="TRUE" Hidden="TRUE" />
@@ -263,6 +263,9 @@
           <pnp:FieldDefaults>
             <pnp:FieldDefault FieldName="Title">Status</pnp:FieldDefault>
           </pnp:FieldDefaults>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://germanywestcentral1-0.pushnp.svc.ms/notifications?token=f80835e9-2a00-46e8-b120-985403297bb0%2Fb!5vfCH21ZSkiTmhujyrRpFFECCxjMxnNErNSfIPS1d4UtULsDFwRTRpYJT-gAz-LL" ExpiresInDays="1" />
+          </pnp:Webhooks>
         </pnp:ListInstance>
       </pnp:Lists>
     </pnp:ProvisioningTemplate>

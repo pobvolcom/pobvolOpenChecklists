@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
   <pnp:Preferences Generator="PnP.Framework, Version=1.18.0.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-C3AA791150394E13A247785E87A39FF8">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-C3AA791150394E13A247785E87A39FF8" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-49E402FF088940B9B5A8C817DC228937">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-49E402FF088940B9B5A8C817DC228937" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
       <pnp:SiteFields>
         <Field ID="{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}" Name="_SPCallToAction" StaticName="_SPCallToAction" DisplayName="Handlungsaufruf" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" />
         <Field ID="{86EBE41F-255F-4170-B040-9977528A8BF5}" Name="_SPCollaborators" StaticName="_SPCollaborators" DisplayName="Mitarbeiter" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ReadOnly="TRUE" Hidden="TRUE" />
@@ -425,16 +425,10 @@
               <pnp:DataValue FieldName="FileLeafRef">56_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
             </pnp:DataRow>
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="Title">Field1_Text</pnp:DataValue>
-              <pnp:DataValue FieldName="Load">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ResponseType">Text</pnp:DataValue>
-              <pnp:DataValue FieldName="Choices" />
-              <pnp:DataValue FieldName="Order">5700</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">57_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
-            </pnp:DataRow>
           </pnp:DataRows>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://germanywestcentral1-0.pushnp.svc.ms/notifications?token=f80835e9-2a00-46e8-b120-985403297bb0%2Fb!5vfCH21ZSkiTmhujyrRpFFECCxjMxnNErNSfIPS1d4WhW1DK4iSZQq2jHc7utoFU" ExpiresInDays="1" />
+          </pnp:Webhooks>
         </pnp:ListInstance>
       </pnp:Lists>
     </pnp:ProvisioningTemplate>
