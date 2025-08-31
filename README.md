@@ -21,7 +21,7 @@ With the software solution <b>pobvol Open Checklists</b>, your teams can easily 
 <br />
 <b>Microsoft OneDrive</b> is used by the PC component for data backups. The tool synchronizes files between the PC component and your SharePoint library. OneDrive is included in Microsoft 365 Business Basic. <a href="https://support.microsoft.com/en-us/office/sync-sharepoint-files-and-folders-87a96948-4dd7-43e4-aca1-53f3e18bea9b" target="_blank" rel="nofollow">Learn more&#9775;</a><br />
 <br />
-A <b>Microsoft Power Apps</b> application is the most important part of the solution. The app allows your team to create and adapt the required checklists with checkpoints, to assign fields and status to the checkpoints and to record the results of checks and activities. Power Apps is included in Microsoft 365 Business Basic. <a href="https://docs.microsoft.com/en-us/powerapps/" target="_blank" rel="nofollow">Learn more&#9775;</a><br />
+A <b>Microsoft Power Apps</b> application is the most important part of the solution. The app allows your team to create and adapt the required checklists with checkpoints, to assign fields and status to the checkpoints and to record the results of checks and activities. Power Apps is included in Microsoft 365 Business Basic. Power Apps uses a unique programming language known as Power Fx <a href="https://docs.microsoft.com/en-us/powerapps/" target="_blank" rel="nofollow">Learn more&#9775;</a><br />
 <br />
 A <b>Microsoft Power Automate</b> flow is used for automation. The flow summarizes the sent data in a report and sends it via Outlook to the sender. Power Automate is included in Microsoft 365 Business Basic. <a href="https://docs.microsoft.com/en-us/power-automate/" target="_blank" rel="nofollow">Learn more&#9775;</a><br />
 <br />
