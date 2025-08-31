@@ -1,0 +1,39 @@
+---------------------------------------
+Version 1.10 uploaded on August 29, 2025
+---------------------------------------
+
+Minor optimizations:
+> Added screens to add and edit status information
+> Setup of SP list pssLanguages optimized. 
+  This list contains the translations into German and English.
+
+---------------------------------------
+Version 1.9 uploaded on August 27, 2025
+---------------------------------------
+
+Minor optimizations:
+> Fields, checkpoints and checklist can be deleted also they were used for checks/activities
+> Added translations which were missed beforehand
+> Added a screen for the status information with status overview and details
+
+---------------------------------------
+Version 1.8 uploaded on August 23, 2025
+---------------------------------------
+
+Minor optimizations:
+> all screens are translated, available languages are German and English
+> also the screen 'Add field' is translated, that was missing 
+> Demo data is delivered with the SharePoint files for Status, Fields, Checklists and Checkpoints
+
+---------------------------------------
+Version 1.7 uploaded on Aug 21st, 2025
+---------------------------------------
+
+Minor optimizations:
+All screens are now speech-free. Available languages: German, English
+Demo data is delivered with the SharePoint files for Status, Fields, Checklists and Checkpoints
+
+Power App and Power Automate Flow are delivered with a non managed solution.
+Means: You can modify and enhance in Teams or Edge. 
+Just open Power Apps for your team in Teams or open Power Apps in your browser.
+

@@ -167,9 +167,9 @@ If($strError -eq "" -AND $SPSiteExist -eq "true"){
         # Export lists
         $SPList = "pssActivities"; ExtractSPList $SPList
         $SPList = "pssActivitiesP"; ExtractSPList $SPList
-        $SPList = "Checklists"; ExtractSPList $SPList
+        $SPList = "pssChecklists"; ExtractSPList $SPList
         $SPList = "pssChecklistsText"; ExtractSPList $SPList
-        $SPList = "Checkpoints"; ExtractSPList $SPList
+        $SPList = "pssCheckpoints"; ExtractSPList $SPList
         $SPList = "pssCheckpointsText"; ExtractSPList $SPList
         $SPList = "pssFlexFields"; ExtractSPList $SPList
         $SPList = "pssFlexFieldsText"; ExtractSPList $SPList

@@ -37,6 +37,7 @@ Function CreateSPList
         Invoke-PnPSiteTemplate -Path $fileName
     }
 }
+#---------------------------------------------------------------------------------------
 Function UpdateSPList
 {
     Param ([string]$SPList)
@@ -46,6 +47,15 @@ Function UpdateSPList
     # Excecute only if the file exists
     if (Test-Path -Path $fileName -PathType Leaf) {
         try {
+
+            # Before loading languages we must delete the existing records
+            If($SPList -eq "UpdatepssLanguages"){
+                $strMessage = "Deleting entries from SP list pssLanguages"
+                Write-Host $strMessage
+                LogWrite $strMessage
+                $DelFromSPList = "pssLanguages"; DeleteItemsFromSPList $DelFromSPList
+            }
+
             $strMessage = "Updating SharePoint list " +$SPList
             Write-Host $strMessage
             LogWrite $strMessage
@@ -72,6 +82,31 @@ Function UpdateSPList
     }
     
 }
+#---------------------------------------------------------------------------------------
+# Thanks to https://powershellfaqs.com/delete-all-items-from-a-sharepoint-list-using-pnp-powershell/
+Function DeleteItemsFromSPList
+{
+    Param ([string]$DelFromSPList)
+    # Does the list already exist?
+    $SPListExist = "false"
+    $Lists = Get-PnPList
+    foreach($List in $Lists) { 
+        If($($List.Title) -eq $DelFromSPList){
+            $SPListExist = "true"
+        }
+    }
+    # Delete entries from list
+    If($SPListExist -eq "true"){
+        # Get all items in the list
+        $items = Get-PnPListItem -List $DelFromSPList
+        # Loop through and delete each item
+        foreach ($item in $items) {
+            #Write-Host $item.Id
+            Remove-PnPListItem -List $DelFromSPList -Identity $item.Id -Force
+        }
+    }
+}
+#---------------------------------------------------------------------------------------
 Function LogWrite
 {
     Param ([string]$strMessage)
@@ -235,14 +270,15 @@ If($strError -eq ""){
     
     If($SPSiteExist -eq "true"){
 
-        $strMessage = "Creating the SharePoint lists"
-        Write-Host $strMessage
-        LogWrite $strMessage
-        
-	    Connect-PnPOnline -Url $SPSiteURL -Interactive -ClientId $PnPRocksId
-
         # Definition files for the lists are save in subfolder 'Microsoft SharePoint'
         $MyPathSharePoint = $MyPath + '\Microsoft SharePoint'
+
+        
+        $strMessage = "Connecting to SharePoint site"
+        Write-Host $strMessage
+        LogWrite $strMessage
+        Connect-PnPOnline -Url $SPSiteURL -Interactive -ClientId $PnPRocksId
+
 
         # Create SharePoint lists
         $SPList = "pssActivities"; CreateSPList $SPList
@@ -253,9 +289,24 @@ If($strError -eq ""){
         $SPList = "pssCheckpointsText"; CreateSPList $SPList
         $SPList = "pssFlexFields"; CreateSPList $SPList
         $SPList = "pssFlexFieldsText"; CreateSPList $SPList        
-        $SPList = "pssLanguages"; CreateSPList $SPList
         $SPList = "pssStatus"; CreateSPList $SPList
         $SPList = "pssStatusText"; CreateSPList $SPList
+        $SPList = "pssLanguages"; CreateSPList $SPList
+
+
+        # Update SharePoint lists
+        $SPList = "UpdatepssActivities"; UpdateSPList $SPList
+        $SPList = "UpdatepssActivitiesP"; UpdateSPList $SPList
+        $SPList = "UpdatepssChecklists"; UpdateSPList $SPList
+        $SPList = "UpdatepssChecklistsText"; UpdateSPList $SPList
+        $SPList = "UpdatepssCheckpoints"; UpdateSPList $SPList
+        $SPList = "UpdatepssCheckpointsText"; UpdateSPList $SPList
+        $SPList = "UpdatepssFlexFields"; UpdateSPList $SPList
+        $SPList = "UpdatepssFlexFieldsText"; UpdateSPList $SPList        
+        $SPList = "UpdatepssStatus"; UpdateSPList $SPList
+        $SPList = "UpdatepssStatusText"; UpdateSPList $SPList
+        $SPList = "UpdatepssLanguages"; UpdateSPList $SPList
+
     }
 }
 

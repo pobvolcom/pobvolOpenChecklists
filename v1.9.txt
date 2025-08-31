@@ -1,0 +1,6 @@
+Version 1.9 uploaded on August 27, 2025
+
+Minor optimizations:
+> Fields, checkpoints and checklist can be deleted also they were used for checks/activities
+> Added translations which were missed beforehand
+> Added a screen for the status information with status overview and details
