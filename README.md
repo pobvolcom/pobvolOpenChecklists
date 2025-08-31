@@ -1,19 +1,16 @@
 <h3>Quickly and easily define checklists with checkpoints and fields | Collect data in a structured way | Free Software | Open Source | Microsoft 365 (Office 365) | PCs/Macs & Mobile Devices | Study</h3>
 <span style="font-size: smaller;">The use is free of charge. Free Software. Open Source.</span><br />
 <br />
-<p>
+<img width="40%" src="../images/pobvolOpenChecklists.png" alt="pobvol Open Checklists|pssChecks|Collect data">
 With the software solution <b>pobvol Open Checklists</b>, your teams can easily and quickly define their own checklists with checkpoints and fields and then use them to transmit the results of checks and other activities to their own SharePoint lists in a structured manner.<br /> 
 <br />
-    <b>Why does this help?</b><br>
-    <br>
-    <ul>
-        <li>Data structures do not have to be laboriously programmed in databases and lists. This is easy and quick with the solution.</li><br> 
-        <li>All users can customize the checklists, checkpoints, and fields to meet the needs of the team. Your users can define Text, Number, Date, and Choice (choices / combo box) fields and assign them to each checkpoint in a checklist. This ensures maximum flexibility.</li><br>
-        <li>Structured data can also be easily processed and evaluated. This is not so quick and easy with unstructured data from e-mails or text messages.</li>
-    </ul>
-     <br />
-</p>
-
+<b>Why does this help?</b><br>
+<ul>
+<li>Data structures do not have to be laboriously programmed in databases and lists. This is easy and quick with the solution.</li><br> 
+<li>All users can customize the checklists, checkpoints, and fields to meet the needs of the team. Your users can define Text, Number, Date, and Choice (choices / combo box) fields and assign them to each checkpoint in a checklist. This ensures maximum flexibility.</li><br>
+<li>Structured data can also be easily processed and evaluated. This is not so quick and easy with unstructured data from e-mails or text messages.</li>
+</ul>
+<br />
 <b>A Microsoft Power Apps application</b> is the most important part of the solution. It allows your team to create the necessary fields, checklists, checkpoints, and record the results of checks and other activities.<br>
 <br>
 
