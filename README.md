@@ -1,5 +1,4 @@
 <h3>Quickly and easily define checklists with checkpoints and fields | Collect data in a structured way | Free Software | Open Source | Microsoft 365 (Office 365) | PCs/Macs & Mobile Devices | Study</h3>
-<span style="font-size: smaller;">The use is free of charge. Free Software. Open Source.</span><br />
 <br />
 <img width="40%" src="/images/pobvolOpenChecklists.png">
 With the software solution <b>pobvol Open Checklists</b>, your teams can easily and quickly define their own checklists with checkpoints and fields and then use them to transmit the results of checks and other activities to their own SharePoint lists in a structured manner.<br /> 
