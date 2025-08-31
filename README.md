@@ -1,5 +1,4 @@
 <h3>Quickly and easily define checklists with checkpoints and fields | Collect data in a structured way | Free Software | Open Source | Microsoft 365 (Office 365) | PCs/Macs & Mobile Devices | Study</h3>
-<br>
 <span style="font-size: smaller;">The use is free of charge. Free Software. Open Source.</span><br />
 <br />
 <p>
