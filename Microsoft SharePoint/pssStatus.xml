@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
   <pnp:Preferences Generator="PnP.Framework, Version=1.18.0.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-4D8951205E2943B3898C89AEC06FBCDE">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-4D8951205E2943B3898C89AEC06FBCDE" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-E20353A1E36A4C95AEECD777C3A63B41">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-E20353A1E36A4C95AEECD777C3A63B41" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
       <pnp:SiteFields>
         <Field ID="{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}" Name="_SPCallToAction" StaticName="_SPCallToAction" DisplayName="Handlungsaufruf" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" />
         <Field ID="{86EBE41F-255F-4170-B040-9977528A8BF5}" Name="_SPCollaborators" StaticName="_SPCollaborators" DisplayName="Mitarbeiter" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ReadOnly="TRUE" Hidden="TRUE" />
@@ -39,6 +39,7 @@
                 <FieldRef Name="SortNo" />
                 <FieldRef Name="DefectClass" />
                 <FieldRef Name="Icon" />
+                <FieldRef Name="Modified" />
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
@@ -49,9 +50,11 @@
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field Type="Number" DisplayName="SortNo" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Decimals="0" ID="{ea3ecd46-929a-4643-92f1-859d7943843e}" SourceID="{{listid:pssStatus}}" StaticName="SortNo" Name="SortNo" ColName="float1" RowOrdinal="0" CustomFormatter="" Percentage="FALSE" Version="1" />
-            <Field Type="Text" DisplayName="Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="32" ID="{90bd31dc-abff-4055-b733-621e9b6d40a3}" SourceID="{{listid:pssStatus}}" StaticName="Status" Name="Status" ColName="nvarchar7" RowOrdinal="0" CustomFormatter="" Version="2" />
-            <Field Type="Number" DisplayName="DefectClass" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" Min="0" Max="10" Decimals="0" ID="{a2a5d646-2244-441d-8949-427ad86ce3cc}" SourceID="{{listid:pssStatus}}" StaticName="DefectClass" Name="DefectClass" ColName="float2" RowOrdinal="0" CustomFormatter="" Percentage="FALSE" Version="1" />
+            <Field Type="Number" DisplayName="SortNo" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Decimals="0" ID="{ea3ecd46-929a-4643-92f1-859d7943843e}" SourceID="{{listid:pssStatus}}" StaticName="SortNo" Name="SortNo" ColName="float1" RowOrdinal="0" CustomFormatter="" Percentage="FALSE" Version="2" />
+            <Field Type="Text" DisplayName="Status" Required="FALSE" EnforceUniqueValues="TRUE" Indexed="TRUE" MaxLength="32" ID="{90bd31dc-abff-4055-b733-621e9b6d40a3}" SourceID="{{listid:pssStatus}}" StaticName="Status" Name="Status" ColName="nvarchar7" RowOrdinal="0" CustomFormatter="" Version="4" />
+            <Field Type="Number" DisplayName="DefectClass" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Min="0" Max="10" Decimals="0" ID="{a2a5d646-2244-441d-8949-427ad86ce3cc}" SourceID="{{listid:pssStatus}}" StaticName="DefectClass" Name="DefectClass" ColName="float2" RowOrdinal="0" CustomFormatter="" Percentage="FALSE" Version="2">
+              <Default>0</Default>
+            </Field>
             <Field Type="Text" DisplayName="Icon" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="32" ID="{5b2b8a19-0b68-4892-97a9-9dcb1ba97f13}" SourceID="{{listid:pssStatus}}" StaticName="Icon" Name="Icon" ColName="nvarchar8" RowOrdinal="0" CustomFormatter="" Version="1" />
           </pnp:Fields>
           <pnp:FieldRefs>
@@ -259,13 +262,20 @@
               <pnp:DataValue FieldName="FileLeafRef">22_.000</pnp:DataValue>
               <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
             </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="SortNo" />
+              <pnp:DataValue FieldName="Status">Status1</pnp:DataValue>
+              <pnp:DataValue FieldName="DefectClass">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Icon">Icon.ThumbsUp</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">2400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">24_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
           </pnp:DataRows>
           <pnp:FieldDefaults>
             <pnp:FieldDefault FieldName="Title">Status</pnp:FieldDefault>
           </pnp:FieldDefaults>
-          <pnp:Webhooks>
-            <pnp:Webhook ServerNotificationUrl="https://germanywestcentral1-0.pushnp.svc.ms/notifications?token=f80835e9-2a00-46e8-b120-985403297bb0%2Fb!5vfCH21ZSkiTmhujyrRpFFECCxjMxnNErNSfIPS1d4UtULsDFwRTRpYJT-gAz-LL" ExpiresInDays="1" />
-          </pnp:Webhooks>
         </pnp:ListInstance>
       </pnp:Lists>
     </pnp:ProvisioningTemplate>

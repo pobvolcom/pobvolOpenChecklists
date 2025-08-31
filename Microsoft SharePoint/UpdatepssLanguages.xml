@@ -1,0 +1,1837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.18.0.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-43DE34F9EE4D41D6B5A01E227A530D73">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-43DE34F9EE4D41D6B5A01E227A530D73" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:SiteFields>
+        <Field ID="{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}" Name="_SPCallToAction" StaticName="_SPCallToAction" DisplayName="Handlungsaufruf" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" />
+        <Field ID="{86EBE41F-255F-4170-B040-9977528A8BF5}" Name="_SPCollaborators" StaticName="_SPCollaborators" DisplayName="Mitarbeiter" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ReadOnly="TRUE" Hidden="TRUE" />
+        <Field ID="{cb19284a-cde7-4570-a980-1dab8bd74470}" Name="_ExtendedDescription" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ExtendedDescription" DisplayName="Beschreibung" Group="Erweiterte Spalten" RichText="TRUE" ShowInEditForm="FALSE" RichTextMode="Compatible" CanToggleHidden="TRUE" Type="Note" />
+        <Field ID="{AC9CE95B-F081-4B8A-BB19-2F4427D44674}" Name="_ExpirationDate" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ExpirationDate" Hidden="TRUE" Group="_Hidden" ReadOnly="TRUE" Type="Lookup" List="Docs" ShowField="ExpirationDate" DisplayName="Ablaufdatum" FromBaseType="TRUE" DisplaceOnUpgrade="TRUE" FieldRef="ID" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" />
+        <Field ID="{08D89A66-4634-42B8-9D5A-0C27395A48B3}" Name="TriggerFlowInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" ShowInFileDlg="FALSE" Hidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ReadOnlyEnforced="FALSE" ReadOnly="TRUE" DisplaceOnUpgrade="TRUE" StaticName="TriggerFlowInfo" Type="Text" DisplayName="Flow-Info auslösen" Sortable="FALSE" />
+        <Field ID="{4C321A6D-2A91-428B-8296-59408B35901A}" Name="_SourceDynamicSectionId" StaticName="_SourceDynamicSectionId" DisplayName="sourceDynamicPageId" Type="Text" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Indexed="TRUE" Description="" ShowInEditForm="FALSE" AllowDeletion="FALSE" Hidden="TRUE" />
+        <Field ID="{D8A77D76-536B-45D2-8B9B-E4E9B00CF3DC}" Name="_Emoji" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" Hidden="TRUE" ShowInFileDlg="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" DisplaceOnUpgrade="TRUE" StaticName="_Emoji" Type="Text" DisplayName="Emoji" Sortable="FALSE" />
+        <Field ID="{ff41708b-e251-4237-a060-bea44657e8dc}" Name="_SPAssetFolderId" StaticName="_SPAssetFolderId" DisplayName="Ressourcenordner-ID" Type="Number" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ReadOnly="TRUE" AllowDeletion="FALSE" Hidden="TRUE" />
+        <Field ID="{0F17D094-F613-4D33-8031-7B22650AAD78}" Name="MediaUserMetadata" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" Hidden="TRUE" Group="_Hidden" Sealed="TRUE" UnlimitedLengthInDocumentLibrary="TRUE" ShowInFileDlg="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" DisplaceOnUpgrade="TRUE" StaticName="MediaUserMetadata" Type="Note" DisplayName="Medienbenutzermetadaten" Sortable="FALSE" />
+        <Field ID="{DCA4E5A0-0887-4480-8F7B-EFCF76B76413}" Name="MediaGeneratedMetadata" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" Hidden="TRUE" Group="_Hidden" Sealed="TRUE" UnlimitedLengthInDocumentLibrary="TRUE" ShowInFileDlg="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" DisplaceOnUpgrade="TRUE" StaticName="MediaGeneratedMetadata" Type="Note" DisplayName="Mediengenerierte Metadaten" Sortable="FALSE" />
+        <Field ID="{577d74a4-b828-4c3c-bfcd-b16d76cdbc0a}" Name="ComplianceTagAppId" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" ShowInFileDlg="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" Hidden="TRUE" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" StaticName="ComplianceTagAppId" Type="Text" DisplayName="Von App-ID angewendete Bezeichnung" Sortable="FALSE" />
+        <Field ID="{3BDAB9AC-9E5D-44D4-BDE9-13B37E170618}" Name="_ColorHex" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" Hidden="TRUE" ShowInFileDlg="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" DisplaceOnUpgrade="TRUE" StaticName="_ColorHex" Type="Text" DisplayName="Farbe" Sortable="FALSE" />
+        <Field ID="{76D13CD2-1BAE-45A5-8B74-545B87B65037}" Name="_ColorTag" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" ShowInFileDlg="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ReadOnly="TRUE" DisplaceOnUpgrade="TRUE" Type="Text" StaticName="_ColorTag" DisplayName="Farbkennzeichnung" Sortable="TRUE" />
+        <Field ID="{3A8EE3F8-166B-4394-B3E2-E98DCF86A847}" Name="A2ODMountCount" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="A2ODMountCount" Hidden="TRUE" Group="_Hidden" ReadOnly="TRUE" Type="Lookup" List="Docs" ShowField="A2ODMountCount" DisplayName="A2OD-Bereitstellungsanzahl" FromBaseType="TRUE" DisplaceOnUpgrade="TRUE" FieldRef="ID" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" />
+        <Field ID="{031C92FD-9CB6-4AC8-8F5F-636D28E37079}" Name="_SPAuthoringMetadata" StaticName="_SPAuthoringMetadata" DisplayName="Metadaten werden erstellt" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ReadOnly="TRUE" Hidden="TRUE" />
+      </pnp:SiteFields>
+      <pnp:Lists>
+        <pnp:ListInstance Title="pssLanguages" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/pssLanguages" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableAttachments="false" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/pssLanguages/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/pssLanguages/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/pssLanguages/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="wte_Source" Value="https://pobvol.sharepoint.com/sites/pssService/Lists/UVVSettings/AllItems.aspx" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{1889B905-CF22-4055-8AC8-1A77E40EDA05}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Alle Elemente" Url="{site}/Lists/pssLanguages/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="Modified" />
+                <FieldRef Name="ID" />
+                <FieldRef Name="Key" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="LanguageTag" />
+                <FieldRef Name="Wert" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter><![CDATA[]]></CustomFormatter>
+              <ColumnWidth>
+                <FieldRef Name="Titel" width="478" />
+                <FieldRef Name="Wert" width="594" />
+                <FieldRef Name="LanguageTag" width="219.20001220703125" />
+              </ColumnWidth>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Name="Wert" FromBaseType="FALSE" Type="Note" DisplayName="Wert" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="1000" RichText="FALSE" RichTextMode="Compatible" Sortable="FALSE" ID="{94605b47-bf68-4458-b690-751de7b1669b}" StaticName="Wert" CustomFormatter="" RestrictedMode="TRUE" IsolateStyles="FALSE" AppendOnly="FALSE" ColName="ntext2" RowOrdinal="0" SourceID="{{listid:pssLanguages}}" />
+            <Field Type="Text" DisplayName="LanguageTag" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="TRUE" MaxLength="2" ID="{1e882b29-132d-4f56-807b-8d92bc76a3c9}" StaticName="LanguageTag" Name="LanguageTag" CustomFormatter="" ColName="nvarchar9" RowOrdinal="0" SourceID="{{listid:pssLanguages}}">
+              <Default>de</Default>
+            </Field>
+            <Field Type="Text" DisplayName="Key" Required="TRUE" EnforceUniqueValues="TRUE" Indexed="TRUE" MaxLength="255" ID="{50ab9429-4a33-4add-8760-fc5ed86eb9ad}" SourceID="{{listid:pssLanguages}}" StaticName="Key" Name="Key" ColName="nvarchar7" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" DisplayName="Title" />
+            <pnp:FieldRef ID="76d13cd2-1bae-45a5-8b74-545b87b65037" Name="_ColorTag" DisplayName="Farbkennzeichnung" />
+          </pnp:FieldRefs>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">___VERSION___</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">20250828-1000</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">___VERSION___-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">39700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">397_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">___VERSION___</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">20250828-1000</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">___VERSION___-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">39800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">398_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Activities</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checks/Aktivitäten</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Activities-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">39900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">399_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Activities</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checks/Activities</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Activities-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">400_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Activities tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checks/Aktivitäten: ID, Datum, Uhrzeit, Checkliste</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Activities tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">401_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Activities tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checks/Activities: ID, Date, Time, Checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Activities tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">402_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Neu</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">403_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">404_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add activity</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Check/Aktivität hinzufügen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add activity-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">405_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add activity</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add check/activity</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add activity-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">406_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkliste hinzufügen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add checklist-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">407_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add checklist-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">408_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkt hinzufügen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add checkpoint-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">40900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">409_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add checkpoint-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">410_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Feld hinzufügen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add field-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">411_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add field</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add field-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">412_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Eine neue Aktivität erfassen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">413_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add a new activity</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">414_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add tooltip Checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkt hinzufügen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add tooltip Checkpoints-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">415_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add tooltip Checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add a checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add tooltip Checkpoints-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">416_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add tooltip FlexFields</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Feld hinzufügen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add tooltip FlexFields-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">417_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add tooltip FlexFields</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add a field</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add tooltip FlexFields-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">418_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Back</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Zurück</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Back-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">41900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">419_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Back</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Back</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Back-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">420_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Back tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Gehe zurück</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Back tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">421_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Back tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Go back</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Back tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">422_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkliste</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checklist-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">423_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checklist-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">424_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checklist title</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkliste: Titel</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checklist title-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">425_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checklist title</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checklist title</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checklist title-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">426_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checklists</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checklisten</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checklists-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">427_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checklists</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checklists</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checklists-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">428_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkt</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">42900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">429_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">430_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint (max 32 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkt (max 32 Zeichen)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint (max 32 chars)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">431_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint (max 32 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpoint (max 32 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint (max 32 chars)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">432_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint description</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunktbeschreibung</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint description-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">433_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint description</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpoint description</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint description-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">434_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint name</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunktname</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint name-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">435_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint name</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpoint name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint name-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">436_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint name (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunktname (max 128 Zeichen)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint name (max 128 chars)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">437_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoint name (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpoint name (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoint name (max 128 chars)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">438_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">checkpoint(s)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkt(e)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">checkpoint(s)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">43900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">439_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">checkpoint(s)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">checkpoint(s)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">checkpoint(s)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">440_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkte</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoints-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">441_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoints-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">442_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoints tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkte: Position und Name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoints tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">443_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Checkpoints tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpoints: Position and name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Checkpoints tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">444_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Choices</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Auswahl</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Choices-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">445_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Choices</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Choices</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Choices-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">446_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Comments</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Kommentar</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Comments-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">447_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Comments</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Comments</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Comments-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">448_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">DateTime</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Datum / Uhrzeit</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">DateTime-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">44900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">449_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">DateTime</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Date / Time</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">DateTime-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">450_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">451_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Delete</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">452_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete checklist?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkliste löschen?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete checklist?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">453_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete checklist?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Delete checklist?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete checklist?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">454_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete checkpoint?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkt löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete checkpoint?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">455_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete checkpoint?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Delete checkpoint?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete checkpoint?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">456_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete field?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Feld löschen?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete field?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">457_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete field?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Delete field?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete field?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">458_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Diesen Eintrag löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">45900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">459_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Delete this entry</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">460_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Description</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Beschreibung</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Description-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">461_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Description</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Description</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Description-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">462_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected checklist?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Soll diese Checkliste gelöscht werden?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected checklist?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">463_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected checklist?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Do you really want to delete the selected checklist?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected checklist?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">464_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected checkpoint?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Soll dieser Checkpunkt gelöscht werden?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected checkpoint?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">465_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected checkpoint?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Do you really want to delete the selected checkpoint?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected checkpoint?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">466_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected field?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Soll dieses Feld gelöscht werden?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected field?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">467_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected field?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Do you really want to delete the selected field?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected field?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">468_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Ändern</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">46900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">469_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Edit</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">470_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit activity</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Check/Aktivität bearbeiten</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit activity-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">471_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit activity</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Edit Check/Activity</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit activity-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">472_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkliste bearbeiten</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit checklist-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">473_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Edit checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit checklist-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">474_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Checkpunkt bearbeiten</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit checkpoint-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">475_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Edit checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit checkpoint-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">476_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Feld bearbeiten</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit field-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">477_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Edit field</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit field-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">478_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Diesen Eintrag ändern</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">47900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">479_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Change this entry</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">480_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Exit</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Beenden</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Exit-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">481_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Exit</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Exit</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Exit-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">482_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Finalize &amp; send activity</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Abschluß &amp; Senden</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Finalize &amp; send activity-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">483_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Finalize &amp; send activity</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Finalize &amp; send activity</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Finalize &amp; send activity-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">484_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Flex fields</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Flex-Felder</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Flex fields-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">485_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Flex fields</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Flex fields</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Flex fields-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">486_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">FlexField</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Feld</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">FlexField-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">48900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">489_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">FlexField</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Field</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">FlexField-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">490_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">FlexFields tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Felder: Feldname</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">FlexFields tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">491_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">FlexFields tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fields: Field name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">FlexFields tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">492_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Help</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Hilfe</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Help-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">493_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Help</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Help</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Help-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">494_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Input required</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Eingabe erforderlich</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Input required-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">495_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Input required</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Input required</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Input required-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">496_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">KEY</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">KEY</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">KEY-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">49900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">499_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">KEY</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">KEY</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">KEY-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">500_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Label (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Bezeichnung (max 128 Zeichen)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Label (max 128 chars)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">501_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Label (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Label (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Label (max 128 chars)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">502_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Language</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Sprache</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Language-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">503_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Language</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Language</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Language-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">504_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Mark all</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Alle OK</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Mark all-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">505_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Mark all</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Mark all</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Mark all-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">506_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Mark all required checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Setze Status für alle erforderlichen Kontrollpunkte</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Mark all required checkpoints-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">507_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Mark all required checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Set status for all required checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Mark all required checkpoints-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">508_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Name</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Name-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">50900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">509_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Name</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Name-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">510_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Name (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Name (max 128 Zeichen)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Name (max 128 chars)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">511_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Name (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Name (max 128 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Name (max 128 chars)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">512_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">No</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Nein</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">No-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">513_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">No</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">No</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">No-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">514_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Nothing here</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Keine Daten gefunden</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Nothing here-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">515_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Nothing here</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Nothing here</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Nothing here-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">516_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Pos up</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Pos hoch</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Pos up-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">517_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Pos up</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Pos up</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Pos up-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">518_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Position</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Position</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Position-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">51900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">519_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Position</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Position</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Position-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">520_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Position up tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Position hoch</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Position up tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">523_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Position up tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Position up</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Position up tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">524_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Possible status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Possible status-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">525_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Possible status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Possible status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Possible status-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">526_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Possible status (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Possible status (max 5)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">527_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Possible status (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Possible status (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Possible status (max 5)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">528_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Refresh</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Neu laden</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Refresh-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">52900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">529_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Refresh</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Refresh</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Refresh-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">530_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Refresh tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Die Daten vom SharePoint neu laden</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Refresh tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">531_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Refresh tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Reload data from SharePoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Refresh tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">532_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Required</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Erforderlich</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Required-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">533_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Required</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Required</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Required-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">534_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">ResponseType</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Feldtyp</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">ResponseType-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">535_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">ResponseType</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Field type</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">ResponseType-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">536_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Save</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Speichern</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Save-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">537_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Save</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Save</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Save-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">538_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Suche nach Checkliste, Datum, Anwender</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">53900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">539_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Search activities by checklist, date and user</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">540_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search tooltip Checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Suche nach Titel, Name und Beschreibung</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search tooltip Checkpoints-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">541_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search tooltip Checkpoints</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Search by checkpoint title, text and description</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search tooltip Checkpoints-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">542_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search tooltip FlexFields</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Suche nach Titel und Name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search tooltip FlexFields-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">543_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search tooltip FlexFields</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Search by title and name</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search tooltip FlexFields-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">544_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search…</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Suchen…</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search…-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">545_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Search…</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Search…</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Search…-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">546_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Send</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Senden</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Send-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">547_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Send</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Send</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Send-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">548_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Send activity to SharePoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Daten an SharePoint-Listen übermitteln</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Send activity to SharePoint-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">54900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">549_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Send activity to SharePoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Send check/activity to SharePoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Send activity to SharePoint-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">550_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Sort</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Sortieren</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Sort-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">551_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Sort</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Sort</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Sort-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">552_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Sort tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Liste auf-/absteigend sortieren</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Sort tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">553_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Sort tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Sort ascending/descending</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Sort tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">554_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Status-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">555_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Status-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">556_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Title</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Titel</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Title-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">557_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Title</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Title</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Title-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">558_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Title (max 32 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Titel (max 32 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Title (max 32 chars)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">55900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">559_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Title (max 32 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Title (max 32 chars)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Title (max 32 chars)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">560_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">User</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Benutzer</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">User-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">561_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">User</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">User</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">User-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">562_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Yes</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Ja</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Yes-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">563_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Yes</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Yes</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Yes-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">564_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Exit app?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">App beenden?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Exit app?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">565_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Exit app?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Exit app?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Exit app?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">566_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte das Feld nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the field-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">567_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the field</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the field</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the field-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">568_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte die Checkliste nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the checklist-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">56900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">569_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the checklist</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the checklist-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">570_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte den Checkpunkt nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the checkpoint-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">571_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the checkpoint</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the checkpoint-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">572_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status löschen?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete status?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">573_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Delete status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Delete status?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Delete status?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">574_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Soll dieser Status gelöscht werden?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected status?-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">575_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Do you really want to delete the selected status?</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Do you really want to delete the selected status?</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Do you really want to delete the selected status?-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">576_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fehler! Konnte den Status nicht löschen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the status-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">577_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Error! Was not able to delete the status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Error! Was not able to delete the status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Error! Was not able to delete the status-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">578_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">SortNo</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">SortNr</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">SortNo-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">57900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">579_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">SortNo</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">SortNo</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">SortNo-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">580_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">DefectClass</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Defektklasse (0,…,10)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">DefectClass-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">581_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">DefectClass</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Defect class (0,…,10)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">DefectClass-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">582_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Icon-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">583_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Icon</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Icon-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">584_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Status tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Status tooltip-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">585_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Status tooltip</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Status tooltip-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">586_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Next</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Weiter</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Next-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">587_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Next</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Next</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Next-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">588_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">About</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Über diese App</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">About-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">58900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">589_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">About</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">About this app</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">About-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">590_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">License</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Lizenz</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">License-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">591_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">License</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">License</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">License-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">592_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status bearbeiten</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit status-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">593_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Edit status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Edit status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Edit status-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">594_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Status hinzufügen</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add status-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">595_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Add status</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Add status</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Add status-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">596_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Flex Fields (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Felder (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">de</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Flex Fields (max 5)-de</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">597_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Flex Fields (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="Wert">Fields (max 5)</pnp:DataValue>
+              <pnp:DataValue FieldName="LanguageTag">en</pnp:DataValue>
+              <pnp:DataValue FieldName="Key">Flex Fields (max 5)-en</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">59800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">598_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://germanywestcentral1-0.pushnp.svc.ms/notifications?token=f80835e9-2a00-46e8-b120-985403297bb0%2Fb!5vfCH21ZSkiTmhujyrRpFFECCxjMxnNErNSfIPS1d4WeccUVyvOYRawwGqLzFUCI" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
