@@ -11,7 +11,9 @@ If(IsBlank(locErrorCode);
     
     //all good?
     If(!IsEmpty(Errors([@MyCheckpoints]));
-        Set(locErrorCode; "Error! Was not able to delete the checkpoint");;
+        Set(locErrorCode; 
+            LookUp(colLanguage;Title="Error! Was not able to delete the checkpoint").Wert
+        );;
         Notify(
             locErrorCode;
             //LookUp(MyUVVSettings;
@@ -20,6 +22,11 @@ If(IsBlank(locErrorCode);
         );;
     ;// Else
         Set (locErrorCode; "");;
+    );;
+
+    // Save checkpoints locally
+    If(MyDeviceType="Mobile" && IsBlank(locErrorCode);
+        SaveData(MyCheckpoints;"MyCheckpoints")  
     );;
 
     // Generate pos number

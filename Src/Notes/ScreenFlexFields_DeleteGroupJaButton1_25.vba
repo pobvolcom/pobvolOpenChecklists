@@ -9,15 +9,20 @@ If(IsBlank(locErrorCode);
     
     //all good?
     If(!IsEmpty(Errors([@MyFlexFields]));
-        Set(locErrorCode; "Error! Was not able to delete the checklist");;
+        Set(locErrorCode; 
+            LookUp(colLanguage;Title="Error! Was not able to delete the field";Wert)
+        );;
         Notify(
             locErrorCode;
-            //LookUp(MyUVVSettings;
-            //Title="Fehler beim Löschen in UVVKundenliste").Wert;
             NotificationType.Error;2000
         );;
     ;// Else
         Set (locErrorCode; "");;
+    );;
+
+    // Save checklists locally
+    If(MyDeviceType="Mobile" && IsBlank(locErrorCode);
+        SaveData(MyFlexFields;"MyFlexFields")  
     );;
 
     //Remove from SP list

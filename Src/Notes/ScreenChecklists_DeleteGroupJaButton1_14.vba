@@ -9,11 +9,11 @@ If(IsBlank(locErrorCode);
     
     //all good?
     If(!IsEmpty(Errors([@MyChecklists]));
-        Set(locErrorCode; "Error! Was not able to delete the checklist");;
+        Set(locErrorCode; 
+            LookUp(colLanguage;Title="Error! Was not able to delete the checklist";Wert)
+        );;
         Notify(
             locErrorCode;
-            //LookUp(MyUVVSettings;
-            //Title="Fehler beim Löschen in UVVKundenliste").Wert;
             NotificationType.Error;2000
         );;
     ;// Else
@@ -27,10 +27,14 @@ If(IsBlank(locErrorCode);
 
     //Remove from SP list
     If(IsBlank(locErrorCode) && OnlineStatus=1;
-        RemoveIf(pssChecklistsChecklists;Title=SelectedChecklist);; 
-        RemoveIf(pssChecklistsChecklistsText;Title=SelectedChecklist);; 
-        RemoveIf(pssChecklistsCheckpoints;Title=SelectedChecklist);; 
-        RemoveIf(pssChecklistsCheckpointsText;Title=SelectedChecklist);; 
+        RemoveIf(pssChecklistsChecklists;
+            Title=SelectedChecklist);; 
+        RemoveIf(pssChecklistsChecklistsText;
+            Title=SelectedChecklist);; 
+        RemoveIf(pssChecklistsCheckpoints;
+            Title=SelectedChecklist);; 
+        RemoveIf(pssChecklistsCheckpointsText;
+            Title=SelectedChecklist);; 
     );;
 
     If(CountRows(MyChecklists)>0;

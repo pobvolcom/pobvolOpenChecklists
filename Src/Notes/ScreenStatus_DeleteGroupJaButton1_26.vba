@@ -39,12 +39,7 @@ If(IsBlank(locErrorCode);
 
     If(CountRows(MyStatus)>0;
         Set(SelectedStatus;
-            First(
-                Sort(
-                    Filter(MyStatus;Status<>Blank());
-                    StatusText
-                )
-            ).Status
+            First(Filter(MyStatus;Status<>Blank())).Status
         );;
         Set(StatusSelected;true);;
     ;//Else

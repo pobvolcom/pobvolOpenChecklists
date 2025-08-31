@@ -364,10 +364,8 @@ If(IsBlank(InitialReadStatus)||InitialReadStatus;
         ClearCollect(colStatus;
             AddColumns(
                 ShowColumns(
-                    Filter(pssChecklistsStatus;
-                        SortNo>=0
-                    );
-                    ID;Titel;Status;SortNo;DefectClass;Icon
+                    pssChecklistsStatus;
+                    ID;Status;DefectClass;Icon
                 ) As aSource;
                 StatusText;                        
                     LookUp(pssChecklistsStatusText;
@@ -393,12 +391,44 @@ If(IsBlank(InitialReadStatus)||InitialReadStatus;
             SortByColumns(
                 ShowColumns(
                     colStatus;
-                    Status;SortNo;DefectClass;Icon;StatusText
+                    Status;DefectClass;Icon;StatusText
                 );
-                "SortNo";SortOrder.Ascending
+                "StatusText";SortOrder.Ascending
             )
         )
     );;
     Set(FooterText;"");;
     Set(_ShowLoadingHint;false);; 
 );;
+//------------------------------------------------
+//List of possible icons
+If(IsBlank(InitialReadIcons)||InitialReadIcons;
+    Set(_ShowLoadingHint;true);;
+    //-----------------------------------------------------
+    Set(InitialReadIcons;false);;
+    //-----------------------------------------------------
+    ClearCollect(colIcons; 
+        {Value:"Icon.Add";Icon:Icon.Add};
+        {Value:"Icon.AddDocument";Icon:Icon.AddDocument};
+        {Value:"Icon.AddLibrary";Icon:Icon.AddLibrary};
+        {Value:"Icon.AddToCalendar";Icon:Icon.AddToCalendar};
+        {Value:"Icon.AddUser";Icon:Icon.AddUser};
+        {Value:"Icon.Blocked";Icon:Icon.Blocked};
+        {Value:"Icon.Flag";Icon:Icon.Flag};
+        {Value:"Icon.CheckBadge";Icon:Icon.CheckBadge};
+        {Value:"Icon.ThumbsUp";Icon:Icon.ThumbsUp};
+        {Value:"Icon.ThumbsDown";Icon:Icon.ThumbsDown};
+        {Value:"Icon.EmojiNeutral";Icon:Icon.EmojiNeutral};
+        {Value:"Icon.EmojiHappy";Icon:Icon.EmojiHappy};
+        {Value:"Icon.EmojiSmile";Icon:Icon.EmojiSmile};
+        {Value:"Icon.EmojiSad";Icon:Icon.EmojiSad};
+        {Value:"Icon.Warning";Icon:Icon.Warning};
+        {Value:"Icon.Medical";Icon:Icon.Medical};
+        {Value:"Icon.Enhance";Icon:Icon.Enhance}
+    );;
+    Set(FooterText;"");;
+    Set(_ShowLoadingHint;false);; 
+);;
+//------------------------------------------------
+
+

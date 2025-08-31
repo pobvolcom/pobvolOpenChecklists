@@ -22,9 +22,10 @@ If(IsBlank(InitialReadStatus)||InitialReadStatus=true;
         ClearCollect(colStatus;
             AddColumns(
                 ShowColumns(
-                    //Filter(pssChecklistsStatus;SortNo>=0);
-                    pssChecklistsStatus;
-                    ID;Status;DefectClass;Icon
+                    Filter(pssChecklistsStatus;
+                        SortNo>=0
+                    );
+                    ID;Titel;Status;SortNo;DefectClass;Icon
                 ) As aSource;
                 StatusText;                        
                     LookUp(pssChecklistsStatusText;
@@ -37,27 +38,56 @@ If(IsBlank(InitialReadStatus)||InitialReadStatus=true;
         If(MyDeviceType="Mobile";
             SaveData(colStatus;"Status")  
         );;
+        //-------------------------------------------------
+        //load Status text from SP list
+        /*
+        Set(FooterText;"Loading Status text");;
+        Refresh(pssChecklistsStatusText);;
+        ClearCollect(colStatusText;
+            ShowColumns(
+                Filter(pssChecklistsStatusText;
+                    Load=true
+                );
+                ID;Title;Text;LanguageTag
+            )
+        );;
+        // Save checklists text locally
+        If(MyDeviceType="Mobile";
+            SaveData(colStatusText;"StatusText")  
+        );;
+        */
     ;//Else
         If(MyDeviceType="Mobile";
             Clear(colStatus);;
+            //Clear(colStatusText);;
+            
             Set(FooterText;"Loading Status from cache");;
             LoadData(colStatus;"Status";true);;
+
+            //Set(FooterText;"Loading Status text from cache");;
+            //LoadData(colStatusText;"StatusText";true);;
+
         )
     );;
     ClearCollect(MyStatus;
         SortByColumns(
             ShowColumns(
                 colStatus;
-                Status;DefectClass;Icon;StatusText
+                Status;SortNo;DefectClass;Icon;StatusText
             );
-            "StatusText";SortOrder.Ascending
+            "SortNo";SortOrder.Ascending
         )
     );;
 
     If(CountRows(MyStatus)>0;
         If(IsBlank(SelectedStatus);
             Set(SelectedStatus;
-                First(Filter(MyStatus;Status<>Blank())).Status
+                First(
+                    Sort(
+                        Filter(MyStatus;Status<>Blank());
+                        StatusText
+                    )
+                ).Status
             )
         );;
         Set(StatusSelected;true);;
@@ -72,6 +102,11 @@ If(IsBlank(InitialReadStatus)||InitialReadStatus=true;
 );;
 //------------------------------------------------
 If(StatusSelected=true;
+    /*
+    Set(SStatusSortNo;
+        LookUp(MyStatus;Status=SelectedStatus;SortNo)
+    );;
+    */
     Set(SStatusDefectClass;
         LookUp(MyStatus;Status=SelectedStatus;DefectClass)
     );;
