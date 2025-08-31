@@ -19,13 +19,7 @@ Screens:
       OnVisible: |+
         =If(IsBlank(SelectedStatus) &&  CountRows(MyStatus)>0,
             Set(SelectedStatus,
-                //LookUp(MyStatus;!IsBlank(Status);Status)
-                First(
-                    Sort(
-                        Filter(MyStatus,Status<>Blank()),
-                        StatusText
-                    )
-                ).Status
+                First(Filter(MyStatus,Status<>Blank())).Status
             );
             Set(StatusSelected,true);
         );
@@ -288,9 +282,7 @@ Screens:
                               RadiusBottomRight: =0
                               RadiusTopLeft: =0
                               RadiusTopRight: =0
-                              Visible: |-
-                                =false
-                                //OnlineStatus=1 && !IsBlank(SelectedFlexField)
+                              Visible: =OnlineStatus=1 && !IsBlank(SelectedStatus)
                               Width: =90
                               X: =Parent.Width-Self.Width
                               Y: =
@@ -315,8 +307,8 @@ Screens:
                                     Icon: =Icon.Edit
                                     OnSelect: |+
                                       =Set(ShowDeleteDialog,false);
-                                      //EditForm(EditForm1_27);;
-                                      //Navigate(ScreenStatusEdit);;
+                                      EditForm(EditForm1_31);
+                                      Navigate(ScreenStatusEdit);
                                     PaddingBottom: =5
                                     PaddingLeft: =5
                                     PaddingRight: =5
@@ -435,8 +427,7 @@ Screens:
                               RadiusTopLeft: =0
                               RadiusTopRight: =0
                               Visible: |+
-                                =false
-                                //OnlineStatus=1 && !IsBlank(SelectedFlexField) 
+                                =OnlineStatus=1 && !IsBlank(SelectedStatus) 
                               Width: =90
                               X: =Parent.Width-Self.Width
                               Y: =Edit1_16.Y+Edit1_16.Height
@@ -506,21 +497,7 @@ Screens:
                               HoverBorderColor: =RGBA(255, 255, 255, 1)
                               HoverColor: =RGBA(109, 49, 162, 1)
                               HoverFill: =RGBA(0, 0, 0, 0)
-                              Icon: |+
-                                =Switch(SStatusIcon,
-                                    "Icon.Blocked",Icon.Blocked,
-                                    "Icon.Flag",Icon.Flag,
-                                    "Icon.CheckBadge",Icon.CheckBadge,
-                                    "Icon.ThumbsUp",Icon.ThumbsUp,
-                                    "Icon.ThumbsDown",Icon.ThumbsUp,
-                                    "Icon.EmojiNeutral",Icon.EmojiNeutral,
-                                    "Icon.EmojiHappy",Icon.EmojiHappy,
-                                    "Icon.EmojiSmile",Icon.EmojiSmile,
-                                    "Icon.EmojiSad",Icon.EmojiSad,
-                                    "Icon.Warning",Icon.Warning,
-                                    "Icon.Medical",Icon.Medical,
-                                    "Icon.Enhance",Icon.Enhance
-                                )
+                              Icon: =LookUp(colIcons,Value=SStatusIcon,Icon)
                               OnSelect: |
                                 =Set(ShowDeleteDialog,false);
                                 //EditForm(EditForm1_27);;
@@ -664,9 +641,7 @@ Screens:
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
-                        Visible: |-
-                          =false
-                          //OnlineStatus=1
+                        Visible: =OnlineStatus=1
                         Width: =90
                         X: =
                         Y: =
@@ -688,9 +663,9 @@ Screens:
                               Icon: =Icon.Add
                               OnSelect: |+
                                 =Set(ShowDeleteDialog,false);
-                                //ResetForm(EditForm1_26);;
-                                //NewForm(EditForm1_26);;
-                                //Navigate(ScreenStatusAdd);;
+                                ResetForm(EditForm1_32);
+                                NewForm(EditForm1_32);
+                                Navigate(ScreenStatusAdd);
                               PaddingBottom: =5
                               PaddingLeft: =5
                               PaddingRight: =5
@@ -1181,7 +1156,7 @@ Screens:
                         Height: =50
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(152, 208, 70, 1)
-                        OnSelect: "=Set(ShowDeleteDialog,false);\r\nSet (locErrorCode, \"\");\r\n//--------------------------------------------------------\r\n// Delete Status\r\nIf(IsBlank(locErrorCode),\r\n\r\n    // remove from collection\r\n    RemoveIf(MyStatus,Status=SelectedStatus); \r\n    \r\n    //all good?\r\n    If(!IsEmpty(Errors([@MyStatus])),\r\n        Set(locErrorCode, \r\n            LookUp(colLanguage,Title=\"Error! Was not able to delete the status\",Wert)\r\n        );\r\n        Notify(\r\n            locErrorCode,\r\n            NotificationType.Error,2000\r\n        );\r\n    ,// Else\r\n        Set (locErrorCode, \"\");\r\n    );\r\n\r\n    // Save Status locally\r\n    If(IsBlank(locErrorCode),\r\n        RemoveIf(colStatus,Status=SelectedStatus); \r\n        If(MyDeviceType=\"Mobile\" && IsBlank(locErrorCode),\r\n            SaveData(colStatus,\"Status\")  \r\n        );\r\n    );\r\n\r\n    //Remove from SP list\r\n    If(IsBlank(locErrorCode) && OnlineStatus=1,\r\n\r\n        RemoveIf(pssChecklistsStatus,\r\n            Status=SelectedStatus); \r\n\r\n        RemoveIf(pssChecklistsStatusText,   Status=SelectedStatus); \r\n    );\r\n\r\n    If(CountRows(MyStatus)>0,\r\n        Set(SelectedStatus,\r\n            First(\r\n                Sort(\r\n                    Filter(MyStatus,Status<>Blank()),\r\n                    StatusText\r\n                )\r\n            ).Status\r\n        );\r\n        Set(StatusSelected,true);\r\n    ,//Else\r\n        Set(SelectedStatus,\"\");\r\n        Set(StatusSelected,false);\r\n    );\r\n    Set(InitialReadStatus,true);\r\n    Set(ReadStatus,true);\r\n\r\n);\r\n\r\n"
+                        OnSelect: "=Set(ShowDeleteDialog,false);\r\nSet (locErrorCode, \"\");\r\n//--------------------------------------------------------\r\n// Delete Status\r\nIf(IsBlank(locErrorCode),\r\n\r\n    // remove from collection\r\n    RemoveIf(MyStatus,Status=SelectedStatus); \r\n    \r\n    //all good?\r\n    If(!IsEmpty(Errors([@MyStatus])),\r\n        Set(locErrorCode, \r\n            LookUp(colLanguage,Title=\"Error! Was not able to delete the status\",Wert)\r\n        );\r\n        Notify(\r\n            locErrorCode,\r\n            NotificationType.Error,2000\r\n        );\r\n    ,// Else\r\n        Set (locErrorCode, \"\");\r\n    );\r\n\r\n    // Save Status locally\r\n    If(IsBlank(locErrorCode),\r\n        RemoveIf(colStatus,Status=SelectedStatus); \r\n        If(MyDeviceType=\"Mobile\" && IsBlank(locErrorCode),\r\n            SaveData(colStatus,\"Status\")  \r\n        );\r\n    );\r\n\r\n    //Remove from SP list\r\n    If(IsBlank(locErrorCode) && OnlineStatus=1,\r\n\r\n        RemoveIf(pssChecklistsStatus,\r\n            Status=SelectedStatus); \r\n\r\n        RemoveIf(pssChecklistsStatusText,   Status=SelectedStatus); \r\n    );\r\n\r\n    If(CountRows(MyStatus)>0,\r\n        Set(SelectedStatus,\r\n            First(Filter(MyStatus,Status<>Blank())).Status\r\n        );\r\n        Set(StatusSelected,true);\r\n    ,//Else\r\n        Set(SelectedStatus,\"\");\r\n        Set(StatusSelected,false);\r\n    );\r\n    Set(InitialReadStatus,true);\r\n    Set(ReadStatus,true);\r\n\r\n);\r\n\r\n"
                         PaddingLeft: =45
                         PressedColor: =RGBA(0, 0, 0, 1)
                         PressedFill: =RGBA(152, 208, 70, 1)
@@ -1295,7 +1270,95 @@ Screens:
             HoverBorderColor: =
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            OnTimerEnd: "=If(Connection.Connected,\r\n    Set (OnlineStatus, 1)\r\n,// Else    \r\n    Set (OnlineStatus, 0)\r\n);\r\n//------------------------------------------------\r\n//Load Status\r\nIf(IsBlank(InitialReadStatus)||InitialReadStatus=true,\r\n    Set(_ShowLoadingHint,true);\r\n    //-----------------------------------------------------\r\n    Set(InitialReadStatus,false);\r\n    //-----------------------------------------------------\r\n    If(IsBlank(StatusSortDescending),\r\n        Set(StatusSortDescending,false)\r\n    );\r\n    //-----------------------------------------------------\r\n    If(OnlineStatus=1,\r\n        //-------------------------------------------------\r\n        //load Status from SP list\r\n        Set(FooterText,\"Loading Status\");\r\n        Refresh(pssChecklistsStatus);\r\n        ClearCollect(colStatus,\r\n            AddColumns(\r\n                ShowColumns(\r\n                    Filter(pssChecklistsStatus,\r\n                        SortNo>=0\r\n                    ),\r\n                    ID,Titel,Status,SortNo,DefectClass,Icon\r\n                ) As aSource,\r\n                StatusText,                        \r\n                    LookUp(pssChecklistsStatusText,\r\n                    Status=aSource.Status &&\r\n                    LanguageTag=Left(Language(),2),\r\n                    StatusText)\r\n            )\r\n        );\r\n        // Save status locally\r\n        If(MyDeviceType=\"Mobile\",\r\n            SaveData(colStatus,\"Status\")  \r\n        );\r\n        //-------------------------------------------------\r\n        //load Status text from SP list\r\n        /*\r\n        Set(FooterText;\"Loading Status text\");;\r\n        Refresh(pssChecklistsStatusText);;\r\n        ClearCollect(colStatusText;\r\n            ShowColumns(\r\n                Filter(pssChecklistsStatusText;\r\n                    Load=true\r\n                );\r\n                ID;Title;Text;LanguageTag\r\n            )\r\n        );;\r\n        // Save checklists text locally\r\n        If(MyDeviceType=\"Mobile\";\r\n            SaveData(colStatusText;\"StatusText\")  \r\n        );;\r\n        */\r\n    ,//Else\r\n        If(MyDeviceType=\"Mobile\",\r\n            Clear(colStatus);\r\n            //Clear(colStatusText);;\r\n            \r\n            Set(FooterText,\"Loading Status from cache\");\r\n            LoadData(colStatus,\"Status\",true);\r\n\r\n            //Set(FooterText;\"Loading Status text from cache\");;\r\n            //LoadData(colStatusText;\"StatusText\";true);;\r\n\r\n        )\r\n    );\r\n    ClearCollect(MyStatus,\r\n        SortByColumns(\r\n            ShowColumns(\r\n                colStatus,\r\n                Status,SortNo,DefectClass,Icon,StatusText\r\n            ),\r\n            \"SortNo\",SortOrder.Ascending\r\n        )\r\n    );\r\n\r\n    If(CountRows(MyStatus)>0,\r\n        If(IsBlank(SelectedStatus),\r\n            Set(SelectedStatus,\r\n                First(\r\n                    Sort(\r\n                        Filter(MyStatus,Status<>Blank()),\r\n                        StatusText\r\n                    )\r\n                ).Status\r\n            )\r\n        );\r\n        Set(StatusSelected,true);\r\n    ,//Else\r\n        Set(SelectedStatus,\"\");\r\n        Set(StatusSelected,false);\r\n    );\r\n\r\n    Set(FooterText,\"\");\r\n    Set(_ShowLoadingHint,false); \r\n\r\n);\r\n//------------------------------------------------\r\nIf(StatusSelected=true,\r\n    /*\r\n    Set(SStatusSortNo;\r\n        LookUp(MyStatus;Status=SelectedStatus;SortNo)\r\n    );;\r\n    */\r\n    Set(SStatusDefectClass,\r\n        LookUp(MyStatus,Status=SelectedStatus,DefectClass)\r\n    );\r\n    Set(SStatusIcon,\r\n        LookUp(MyStatus,Status=SelectedStatus,Icon)\r\n    );\r\n    Set(SStatusText,\r\n        LookUp(MyStatus,Status=SelectedStatus,StatusText)\r\n    );\r\n    Set(StatusSelected,false);\r\n);\r\n//-----------------------------------------------------\r\nSet(_ShowLoadingHint,false);\r\nSet(FooterText,\"\");\r\n"
+            OnTimerEnd: |+
+              =If(Connection.Connected,
+                  Set (OnlineStatus, 1)
+              ,// Else    
+                  Set (OnlineStatus, 0)
+              );
+              //------------------------------------------------
+              //Load Status
+              If(IsBlank(InitialReadStatus)||InitialReadStatus=true,
+                  Set(_ShowLoadingHint,true);
+                  //-----------------------------------------------------
+                  Set(InitialReadStatus,false);
+                  //-----------------------------------------------------
+                  If(IsBlank(StatusSortDescending),
+                      Set(StatusSortDescending,false)
+                  );
+                  //-----------------------------------------------------
+                  If(OnlineStatus=1,
+                      //-------------------------------------------------
+                      //load Status from SP list
+                      Set(FooterText,"Loading Status");
+                      Refresh(pssChecklistsStatus);
+                      ClearCollect(colStatus,
+                          AddColumns(
+                              ShowColumns(
+                                  //Filter(pssChecklistsStatus;SortNo>=0);
+                                  pssChecklistsStatus,
+                                  ID,Status,DefectClass,Icon
+                              ) As aSource,
+                              StatusText,                        
+                                  LookUp(pssChecklistsStatusText,
+                                  Status=aSource.Status &&
+                                  LanguageTag=Left(Language(),2),
+                                  StatusText)
+                          )
+                      );
+                      // Save status locally
+                      If(MyDeviceType="Mobile",
+                          SaveData(colStatus,"Status")  
+                      );
+                  ,//Else
+                      If(MyDeviceType="Mobile",
+                          Clear(colStatus);
+                          Set(FooterText,"Loading Status from cache");
+                          LoadData(colStatus,"Status",true);
+                      )
+                  );
+                  ClearCollect(MyStatus,
+                      SortByColumns(
+                          ShowColumns(
+                              colStatus,
+                              Status,DefectClass,Icon,StatusText
+                          ),
+                          "StatusText",SortOrder.Ascending
+                      )
+                  );
+
+                  If(CountRows(MyStatus)>0,
+                      If(IsBlank(SelectedStatus),
+                          Set(SelectedStatus,
+                              First(Filter(MyStatus,Status<>Blank())).Status
+                          )
+                      );
+                      Set(StatusSelected,true);
+                  ,//Else
+                      Set(SelectedStatus,"");
+                      Set(StatusSelected,false);
+                  );
+
+                  Set(FooterText,"");
+                  Set(_ShowLoadingHint,false); 
+
+              );
+              //------------------------------------------------
+              If(StatusSelected=true,
+                  Set(SStatusDefectClass,
+                      LookUp(MyStatus,Status=SelectedStatus,DefectClass)
+                  );
+                  Set(SStatusIcon,
+                      LookUp(MyStatus,Status=SelectedStatus,Icon)
+                  );
+                  Set(SStatusText,
+                      LookUp(MyStatus,Status=SelectedStatus,StatusText)
+                  );
+                  Set(StatusSelected,false);
+              );
+              //-----------------------------------------------------
+              Set(_ShowLoadingHint,false);
+              Set(FooterText,"");
             PressedBorderColor: =Self.Fill
             PressedColor: =Self.Fill
             PressedFill: =RGBA(255, 255, 255, 1)

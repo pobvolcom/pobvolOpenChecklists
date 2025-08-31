@@ -561,7 +561,7 @@ Screens:
                                           Width: =Parent.Width - 60
                                           X: =30
                                           Y: =DataCardValue9_4.Y + DataCardValue9_4.Height
-                              - ChecklistText_DataCard1_18:
+                              - FlexFieldText_DataCard1_18:
                                   Control: TypedDataCard@1.0.7
                                   Variant: ClassicTextualEdit
                                   Properties:
@@ -624,11 +624,9 @@ Screens:
                                             )
                                           Font: =Font.'Open Sans'
                                           FontWeight: =FontWeight.Bold
-                                          Height: =90
                                           HoverBorderColor: =RGBA(0, 18, 107, 1)
                                           HoverFill: =RGBA(186, 202, 226, 1)
                                           MaxLength: =Parent.MaxLength
-                                          Mode: =TextMode.MultiLine
                                           PaddingLeft: =5
                                           RadiusBottomLeft: =0
                                           RadiusBottomRight: =0

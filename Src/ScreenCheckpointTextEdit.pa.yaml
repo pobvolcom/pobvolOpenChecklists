@@ -261,7 +261,7 @@ Screens:
                                       //DataSourceInfo([@pssChecklistsChecklistsText]; DataSourceInfo.MaxLength; Title)
                                     Required: =true
                                     Update: =DataCardValue8_3.Text
-                                    Width: =Parent.Width-150
+                                    Width: =Parent.Width
                                     X: =1
                                     Y: =1
                                   Children:
@@ -364,7 +364,7 @@ Screens:
                                       //DataSourceInfo([@pssChecklistsChecklistsText]; DataSourceInfo.MaxLength; LanguageTag)
                                     Required: =false
                                     Update: =DataCardValue9_2.Text
-                                    Width: =200
+                                    Width: =Parent.Width
                                     X: =2
                                     Y: =1
                                   Children:
@@ -425,7 +425,7 @@ Screens:
                                           RadiusTopRight: =0
                                           Size: =MyFontSize
                                           Tooltip: =Parent.DisplayName
-                                          Width: =Parent.Width - 60
+                                          Width: =200
                                           X: =30
                                           Y: =DataCardKey38_2.Y + DataCardKey38_2.Height + 5
                                     - ErrorMessage33_2:
@@ -463,7 +463,7 @@ Screens:
                                       //DataSourceInfo([@pssChecklistsCheckpointsText]; DataSourceInfo.MaxLength; Checkpoint)
                                     Required: =true
                                     Update: =DataCardValue4.Text
-                                    Width: =Parent.Width-150
+                                    Width: =Parent.Width
                                     X: =1
                                     Y: =2
                                   Children:
@@ -556,7 +556,7 @@ Screens:
                                     DisplayName: =LookUp(colLanguage,Title="Position").Wert
                                     Required: =true
                                     Update: =Value(DataCardValue5.Text)
-                                    Width: =200
+                                    Width: =Parent.Width
                                     X: =2
                                     Y: =2
                                   Children:
@@ -596,7 +596,7 @@ Screens:
                                           RadiusTopRight: =0
                                           Size: =MyFontSize+2
                                           Tooltip: =Parent.DisplayName
-                                          Width: =Parent.Width - 60
+                                          Width: =200
                                           X: =30
                                           Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                                     - ErrorMessage5:

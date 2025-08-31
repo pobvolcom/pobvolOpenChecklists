@@ -23,3 +23,7 @@ EditorState:
     - ScreenFlexFieldAdd
     - ScreenFlexFieldTextEdit
     - ScreenStatus
+    - ScreenStatusAdd
+    - ScreenStatusEdit
+    - ScreenAbout
+    - ScreenLicense
