@@ -45,7 +45,7 @@ You can use <a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-
 
 
 <h3>Data model</h3>
-<img width="100%" src="/images/pobvolOpenChecklistsDataModel.png"><br />
+<img width="100%" src="/images/pobvolOpenChecklistsDataModel.png">
 
 <br />
 <h3>Component list</h3>
