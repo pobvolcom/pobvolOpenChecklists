@@ -1,4 +1,4 @@
-<img width="128px" src="/images/pobvolOpenChecklists.png">
+<img width="128px" src="/images/pobvolOpenChecklistsLogo.png">
 <h3>Quickly and easily define checklists with checkpoints and fields | Collect data in a structured way | Free Software | Open Source | Microsoft 365 (Office 365) | PCs/Macs & Mobile Devices | Study</h3>
 
 With the software solution <b>pobvol Open Checklists</b>, your team can easily and quickly define their own checklists with up to 25 checkpoints, assign fields (text, number, date, choices) and possible status to the checkpoints and than transmit the results of checks and activities to your SharePoint lists in a structured manner. Data structures must not be programmed with a lot of effort in databases and lists. German and English are supported.<br />
